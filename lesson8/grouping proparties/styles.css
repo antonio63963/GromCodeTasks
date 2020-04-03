@@ -1,0 +1,12 @@
+.border {
+    font-size: 24px;
+    background-color: bisque;
+    width: 420px;
+    height: 140px;
+    margin: 50px 100px;
+    padding: 20px;
+    border-width: 10px 20px;
+    border-style: solid solid dashed dashed;
+    border-color:firebrick chartreuse burlywood aqua;
+
+}
