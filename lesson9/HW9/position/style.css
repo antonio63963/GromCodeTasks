@@ -7,29 +7,40 @@
 }
 
 .nvigation {
+    position: fixed;
     height: 40px;
 
 }
+.nav-list {
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+    margin: 0px;
+}
 .nav-list > li {
     position: relative;
-    bottom: 5px;
     display: inline-block;
+
+    
+    
     color: white;
     /* padding: 20; */
     margin-left: 16px;
     
 }
 .content {
-    padding-top: 50%;
+    position: relative;
     background-color: beige;
     height: 5000px;
 }
 .head {
     position: relative;
+    top: 2500px;
     width: 200px;
     height: 200px;
     background-color: aquamarine;
     margin: auto;
+    
     
 }
 .ear {
