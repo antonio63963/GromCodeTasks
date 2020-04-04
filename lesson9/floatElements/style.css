@@ -1,0 +1,19 @@
+.static-parent {
+    position: static;
+}
+.relative-parent {
+    position: relative;
+    bottom: 20px;
+    left: 50px;
+}
+.absolute-parent {
+    position: absolute;
+    margin-bottom: 20px;
+    margin-right: 50px;
+    
+}
+.fixed-parent {
+    position: fixed;
+    margin-bottom: 20px;
+    margin-left: 30px;
+}
