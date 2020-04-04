@@ -1,29 +1,37 @@
+/* *{box-sizing: content-box;} */
 div {
     height: 200px;
-    position: relative;
-    
+    display: inline-block;
+    width: 20%;
+    float: left;
+
 }
+
 .block_red {
     background-color: red;
-    
+
 }
+
 .block_green {
     background-color: green;
-    margin-left: 20%;
-    top: -200px;
+
+
 }
+
 .block_blue {
     background-color: blue;
-    margin-left: 40%;
-    top: -400px;
+
+
 }
-.block_yellow{
+
+.block_yellow {
     background-color: yellow;
-    margin-left: 60%;
-    top: -600px;
+
+
 }
-.block_black{
+
+.block_black {
     background-color: black;
-    margin-left: 80%;
-    top: -800px;
+   
+
 }
