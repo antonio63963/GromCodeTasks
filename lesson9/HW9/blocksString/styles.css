@@ -3,26 +3,26 @@ div {
     position: relative;
     
 }
-.red {
+.block_red {
     background-color: red;
     
 }
-.green {
+.block_green {
     background-color: green;
     margin-left: 20%;
     top: -200px;
 }
-.blue {
+.block_blue {
     background-color: blue;
     margin-left: 40%;
     top: -400px;
 }
-.yellow{
+.block_yellow{
     background-color: yellow;
     margin-left: 60%;
     top: -600px;
 }
-.black{
+.block_black{
     background-color: black;
     margin-left: 80%;
     top: -800px;
