@@ -29,7 +29,7 @@
 }
 
 .content {
-    position: relative;
+    /* position: relative; */
 }
 
 main {
@@ -39,7 +39,7 @@ main {
 }
 
 .head {
-    position: relative;
+    position: absolute;
     top: calc(50% - 100px);
     /* top: calc(50% -500px);  */
     left: calc(50% - 100px);
