@@ -36,12 +36,14 @@
 
 .head {
     position: relative;
-    top: calc(50%); 
+    top: calc(50% - 2200px);
+    /* top: calc(50% -500px);  */
+    left: calc(50% - 100px);
     /* top: 250px; */
     width: 200px;
     height: 200px;
     background-color: aquamarine;
-    margin: auto;
+    /* margin: auto; */
 
 
 }
