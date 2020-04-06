@@ -30,8 +30,11 @@
 
 .content {
     position: relative;
+}
+main {
     background-color: beige;
     height: 5000px;
+
 }
 
 .head {
