@@ -13,26 +13,27 @@
 }
 
 .nav-list {
-    display: inline;
-    
+    display: inline-block;
     line-height: 40px;
-    position: relative;
+    height: 40px;
+    /* position: relative;
     top: 50%;
-    transform: translate(0, -50%);
+    transform: translate(0, -50%); */
     margin: 0px;
     
-
+    
 }
 
 .nav-list>li {
-    /* position: relative; */
+   
+    
     float: left;
     display: inline-block;
     color: white;
     list-style-type: none;
     margin-left: 16px;
     padding: 0px;
-    margin-right: 0px;
+   
 }
 
 
