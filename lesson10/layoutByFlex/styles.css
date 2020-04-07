@@ -47,9 +47,12 @@ ul {
 .dashboard {
     display: flex;
     flex-grow: 1;
-    align-items: center;
-    justify-content: center;
+    /* align-items: center;
+    justify-content: center; */
     background-color: pink;
+}
+.dashboard h2 {
+    margin: auto;
 }
 
 footer {
