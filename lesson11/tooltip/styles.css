@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+}
+
+/* div {
+    margin: 16px;
+    
+} */
+.cont {
+    position: relative;
+    margin-bottom: 0px;
+}
+.text {
+    margin: 16px 0px 0px 16px;
+    position: relative;
+    display:inline-block;
+    border-bottom: 1px dotted black;
+    cursor: pointer;
+}
+.tooltip {
+    display: none;
+    position: absolute;
+    bottom: -40px;
+    z-index: 1;
+    text-decoration: none;
+    /* display: inline-block; */
+    margin-left: 16px;
+    background-color: grey;
+    color: white;
+    padding: 8px;
+    border-radius: 4px;
+}
+.cont .text:hover ~ .tooltip {
+    display: block;
+}
