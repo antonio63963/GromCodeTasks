@@ -9,5 +9,5 @@ ul>li:nth-child(2) {
     text-decoration: line-through;
 }
 ul>li:first-child {
-    text-decoration: overline;
+    text-decoration: red overline;
 }
