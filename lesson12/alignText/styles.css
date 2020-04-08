@@ -9,6 +9,7 @@ h1 {
     text-overflow: ellipsis;
     white-space: nowrap;
     font-size: 74px;
+    margin: auto
 }
 div {
     height: ;: 200px;
