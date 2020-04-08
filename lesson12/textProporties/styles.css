@@ -1,4 +1,4 @@
-html {
+* {
     margin: 32px;
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
@@ -7,6 +7,7 @@ h1 {
     word-spacing: 20px;
     text-transform: uppercase;
     text-align: center;
+    /* vertical-align: middle; */
 }
 p {
     line-height: 28px;
