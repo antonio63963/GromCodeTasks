@@ -5,7 +5,7 @@ html {
 }
 h1 {
     word-spacing: 20px;
-    text-transform: uppercased;
+    text-transform: uppercase;
     text-align: center;
 }
 p {
@@ -15,9 +15,12 @@ p {
     font-weight: 900;
     letter-spacing: 3px;
     font-size: 24px;
-    opacity: 0.2;
+    opacity: 0.8;
     text-decoration: underline;
 }
 a {
     text-decoration: none;
+}
+em {
+    color: grey;
 }
