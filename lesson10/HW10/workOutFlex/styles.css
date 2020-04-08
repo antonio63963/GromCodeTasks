@@ -1,11 +1,10 @@
 * {
     box-sizing: border-box;
 }
-header {
-    display: flex;
-}
-header > h1 {
-    margin: auto;
+
+h1 {
+    /* display: inline-block; */
+    text-align: center;
 }
 .articles-list {
     display: flex;
@@ -16,7 +15,7 @@ header > h1 {
 }
 .article {
     flex: 1 2 300px;
-    /* min-width: 300px; */
+    min-width: 300px;
     margin: 8px;
     padding: 16px;
     background-color: bisque;
