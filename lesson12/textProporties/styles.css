@@ -8,12 +8,11 @@ h1 {
     word-spacing: 20px;
     text-transform: uppercase;
     text-align: center;
-    margin: auto;
+    /* margin: auto; */
     /* vertical-align: middle; */
 }
 p {
     line-height: 28px;
-    /* margin: 0px; */
 }
 .abr {
     font-weight: 900;
