@@ -15,10 +15,11 @@ h1 {
 p {
     line-height: 28px;
     margin: 0;
-    margin-top: 5px;
-    
+    /* padding-top: 5px; */
+    /* display: inline; */
 }
 .abr {
+    /* display: inline; */
     font-weight: 900;
     letter-spacing: 3px;
     font-size: 24px;
@@ -30,4 +31,7 @@ a {
 }
 em {
     color: grey;
+}
+.wrapper {
+    margin-top: 5px;
 }
