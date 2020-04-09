@@ -1,0 +1,11 @@
+* {
+    box-sizing: border-box;
+}
+.texture {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(https://gromcode.s3.eu-central-1.amazonaws.com/front-end/html-css/lesson+13/hw2/background.jpg);
+    background-position: center;
+    /* background-size: cover; */
+    background-repeat: repeat;
+}
