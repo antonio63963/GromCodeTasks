@@ -4,9 +4,9 @@
 .properties-list {
     color: #f39;
     list-style-type: none;
-    line-height: 32px;
 }
 .properties-list__item {
+    line-height: 32px;
     font-size: 24px;
     padding: 8px;
 }
