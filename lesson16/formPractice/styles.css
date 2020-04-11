@@ -14,11 +14,14 @@ input[type="radio"] {
     display: inline-block;
     margin: 0;
 } */
-input, textarea, select, button {
-    margin: 0px 0px 8px 8px;
+input {
+    margin: 8px;
      
 }
 input[type="radio"] {
     /* display: inline-block; */
     margin: 0;
 } 
+.languages, textarea, select, button {
+    margin-left: 8px;
+}
