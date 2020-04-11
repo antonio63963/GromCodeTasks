@@ -1,3 +1,6 @@
+* {
+    box-sizing: border-box;
+}
 .main-form {
     margin: 32px;
 }
@@ -7,4 +10,5 @@ input, textarea, select, button {
 }
 input[type="radio"] {
     display: inline-block;
+    margin: 0;
 }
