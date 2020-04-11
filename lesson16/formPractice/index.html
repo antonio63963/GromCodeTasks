@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice with form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+        integrity="sha256-WAgYcAck1C1/zEl5sBl5cfyhxtLgKGdpI3oKyJffVRI=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <form class="main-form">
+        <input type="text" name="primaryLanguage" value="HTML" disabled>
+        <input type="checkbox" name="agree" unchecked>
+        <input type="checkbox" name="like" readonly>
+        <input type="color" name="favouriteColor" value="#ff7f50">
+        <input type="date" name="birthDate" value="2021-01-02">
+        <input type="datetime-local" name="birthTime" value="2024-10-04T13:02">
+        <input type="email" name="email" placeholder="exemple@domain.com" required>
+        <input type="file" name="avatar">
+        <input type="month" name="startLearning" value="2020-01">
+        <input type="number" name="number" value="17">
+        <textarea name="story" id="" cols="30" rows="5" placeholder="A long time ago..."></textarea>
+        <input type="password" name="password" value="secret">
+        <!-- radio -->
+        <div class="languages">
+            <input type="radio" name="language" value="html"><label>HTML</label>
+            <input type="radio" name="language" value="css" checked><label>CSS</label>
+            <input type="radio" name="language" value="javascript"><label>JavaScript</label>
+        </div>
+        <input type="range" name="learningProgress" value="30">
+        <select name="framework" id="">
+            <option value="react">React</option>
+            <option value="css">CSS</option>
+            <option value="jquery" selected>jQuery</option>
+            <option value="bootstrap">Bootstrap</option>
+        </select>
+         
+        <input type="search" name="search" placeholder="Type first letters...">
+        <input type="time" name="lunchEnd" value="14:01">
+        <input type="url" name="website" placeholder="https://website.com" required>
+        <input type="week" name="birthWeek" value="2021-W51">
+        <button type="submit">Save</button>
+    </form>
+
+</body>
+
+</html>
