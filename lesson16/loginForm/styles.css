@@ -3,14 +3,28 @@
 }
 body {
     background-color: bisque;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+
    
 }
-
-.login-form {
+main {
     position: absolute;
-    top: 50%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.login-form {
+    /* position: absolute; */
+    /* top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); */
     background-color: aqua;
     font-family: monospace;
     font-size: 16px;
@@ -36,6 +50,7 @@ form > div {
     border: 1px solid #808080;
     padding: 4px;
     outline: none;
+    
     /* outline: #ff0000 solid 3px; */
 }
 
