@@ -16,6 +16,9 @@ input[type="radio"] {
 } */
 input, textarea, select, button {
     margin: 8px;
-    max-width: def;
-    /* display: inline-block; */
+     
 }
+input[type="radio"] {
+    /* display: inline-block; */
+    margin: 0;
+} 
