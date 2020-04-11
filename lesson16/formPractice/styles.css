@@ -3,12 +3,19 @@
 } */
 .main-form {
     margin: 32px;
+    display: flex;
+    flex-direction: column;
 }
-input, textarea, select, button {
+/* input, textarea, select, button {
     margin: 8px;
     display: block;
 }
 input[type="radio"] {
     display: inline-block;
     margin: 0;
+} */
+input, textarea, select, button {
+    margin: 8px;
+    max-width: def;
+    /* display: inline-block; */
 }
