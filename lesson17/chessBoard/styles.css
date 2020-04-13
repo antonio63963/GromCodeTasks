@@ -11,12 +11,12 @@ table {
     margin: 16px;
     border: 1px solid black;
 }
-tbody > tr:nth-child(even) >td ~ td:nth-child(-n+9):nth-of-type(even) {
+tbody > tr ~ tr:nth-child(even) >td ~ td:nth-child(-n+9):nth-of-type(even) {
     background-color: #000;
     border: 1px solid black;
 
 }
-tbody > tr:nth-child(odd) >td ~ td:nth-child(-n+9):nth-of-type(odd) {
+tbody > tr ~ tr:nth-child(odd) >td ~ td:nth-child(-n+9):nth-of-type(odd) {
     background-color: #000;
     border: 1px solid black;
 }
@@ -24,7 +24,7 @@ tbody > tr>td ~ td {
     
     border: 1px solid black;
 }
-tbody > tr > td:last-child {
+tbody > tr > td:last-child, tbody >tr:first-child td {
    
     border-style: none !important;
 }
