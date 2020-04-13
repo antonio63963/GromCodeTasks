@@ -25,6 +25,6 @@ input[type="radio"] {
 .languages, textarea, select, button, input {
     margin: 0px 0px 8px 8px;
 } */
-.wrap, .languages {
+.wrap{
     margin: 0px 0px 8px 8px;
 }
