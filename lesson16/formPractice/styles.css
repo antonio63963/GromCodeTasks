@@ -18,10 +18,10 @@ input[type="radio"] {
     margin: 8px;
      
 } */
-/* input[type="radio"] {
+input[type="radio"] {
    
     margin: 0;
-}  */
+} 
 .languages, textarea, select, button, input {
     margin: 0px 0px 8px 8px;
 }
