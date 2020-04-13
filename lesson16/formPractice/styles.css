@@ -1,6 +1,6 @@
-/* * {
+* {
     box-sizing: border-box;
-} */
+}
 .main-form {
     margin: 32px;
     display: flex;
@@ -14,14 +14,17 @@ input[type="radio"] {
     display: inline-block;
     margin: 0;
 } */
-input {
+/* input {
     margin: 8px;
      
-}
-input[type="radio"] {
-    /* display: inline-block; */
+} */
+/* input[type="radio"] {
+   
     margin: 0;
-} 
+}  */
 .languages, textarea, select, button, input {
     margin: 0px 0px 8px 8px;
 }
+/* div {
+    margin: 8px;
+} */
