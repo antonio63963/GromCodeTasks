@@ -1,12 +1,18 @@
-body {
+* {
+    box-sizing: border-box;
+}
+main {
     display: flex;
     justify-content: space-around;
+    align-items: flex-start ;
 }
 .full {
     font-size: 16px;
+    
 }
 .threeQuarters {
     font-size: 32px;
+    
 }
 .half {
     font-size: 64px;
