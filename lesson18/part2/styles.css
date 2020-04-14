@@ -4,7 +4,7 @@
 main {
     display: flex;
     justify-content: space-around;
-    align-items: flex-start ;
+    
 }
 .full {
     font-size: 16px;
