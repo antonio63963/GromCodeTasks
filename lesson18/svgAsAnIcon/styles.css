@@ -9,7 +9,7 @@
     font-weight: 700;
     color: white;
     cursor: pointer;
-    /* line-height: 50px; */
+    line-height: 50px;
 }
 .my-btn:hover {
     color: darkcyan;
@@ -20,4 +20,7 @@
     vertical-align: middle;
     fill: white;
     
+}
+.my-btn:hover > .kiwi {
+    fill: green;
 }
