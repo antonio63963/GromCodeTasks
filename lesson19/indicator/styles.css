@@ -12,6 +12,9 @@ body {
     text-transform: uppercase;
     animation: blinking 2s linear infinite;
 }
+.spinner-text {
+    animation-timing-function: linear;
+}
 
 .rect {
     position: relative;
