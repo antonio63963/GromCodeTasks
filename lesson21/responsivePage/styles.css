@@ -19,9 +19,9 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-items: center;
+    /* justify-items: center; */
     background-image: linear-gradient(60deg, red, orange);
-    /* flex: 0 0 auto; */
+    flex: 0 0 auto;
     color: white;
 }
 
