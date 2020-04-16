@@ -17,7 +17,6 @@ html {
 h1 {
     margin: auto;
     color: white;
-    
 }
 
 .section>h2 {
@@ -71,11 +70,11 @@ h1 {
 .nav-list > li >a {
     color: white;
     text-decoration: none;
-    line-height: 2em;
-    padding: 0 0.5em;
     
 }
 .nav-list > li {
+    line-height: 2em;
+    padding: 0 0.5em;
     background-color: #808080;
     margin-bottom: 0.5em;
     color: white;
