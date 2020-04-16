@@ -1,17 +1,20 @@
 * {
     box-sizing: border-box;
 }
+
 body {
     display: flex;
     flex-direction: column;
     height: 100%;
 }
+
 html {
     font-family: Verdana;
     color: #555;
     font-size: 16px;
     height: 100%;
 }
+
 .header {
     display: flex;
     flex-direction: column;
@@ -19,8 +22,9 @@ html {
     justify-items: center;
     background-image: linear-gradient(60deg, red, orange);
     flex: 0 0 auto;
-    
+
 }
+
 h1 {
     /* margin: auto 0; */
     color: white;
@@ -29,25 +33,32 @@ h1 {
 
 .section>h2 {
     /* text-align: center; */
-    
+
 }
+
 .footer {
     background-color: #e5e5e5;
     padding: 0.5em;
     text-align: center;
     flex: 0 0 auto;
 }
+
 .main {
     display: flex;
-    
+
     flex: 1 0 auto;
 }
-.navigation, .section, .news {
+
+.navigation,
+.section,
+.news {
     padding: 0.5em;
 }
+
 .navigation {
     width: 20%;
 }
+
 .section {
     /* text-align: left; */
     width: 60%;
@@ -56,40 +67,46 @@ h1 {
     flex-direction: column;
     /* justify-content: center; */
 }
+
 .news {
     width: 20%;
 }
+
 .units-list {
     line-height: 1.75em;
     margin: 0;
 }
+
 .css-units {
     color: #8b0000;
     background-color: #e5e5e5;
     font-size: 1.125em;
     font-weight: 700;
 }
+
 .section__header {
     font-size: 5vw;
-    margin: auto;
+    text-align: center;
+    /* margin: auto; */
 }
 
 .nav-list {
     padding: 0;
     list-style-type: none;
 }
-.nav-list > li >a {
+
+.nav-list>li>a {
     color: white;
     text-decoration: none;
-    
-    padding: 0 0.5em;
 }
-.nav-list > li {
+
+.nav-list>li {
+    padding: 0 0.5em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     line-height: 2em;
     background-color: #808080;
     margin-bottom: 0.5em;
     color: white;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
 }
