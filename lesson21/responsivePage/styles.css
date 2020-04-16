@@ -110,3 +110,6 @@ h1 {
     margin-bottom: 0.5em;
     color: white;
 }
+.section>p {
+    margin-top: 0;
+}
