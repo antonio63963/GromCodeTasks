@@ -4,32 +4,39 @@
 body {
     display: flex;
     flex-direction: column;
+    height: 100%;
 }
 html {
     font-family: Verdana;
     color: #555;
     font-size: 16px;
+    height: 100%;
 }
 .header {
     display: flex;
     background-image: linear-gradient(60deg, red, orange);
+    flex: 0 0 auto;
 }
 h1 {
     margin: auto;
     color: white;
+    /* line-height: 2.5em; */
 }
 
 .section>h2 {
     text-align: center;
+    
 }
 .footer {
     background-color: #e5e5e5;
     padding: 0.5em;
     text-align: center;
+    flex: 0 0 auto;
 }
 .main {
     display: flex;
-    height: 100%;
+    
+    flex: 1 0 auto;
 }
 .navigation, .section, .news {
     padding: 0.5em;
@@ -41,8 +48,10 @@ h1 {
     text-align: left;
     width: 60%;
     font-size: 1.25em;
-    /* display: flex;
-    flex-direction: column; */
+    display: flex;
+    flex-direction: column;
+    
+    
    
 
 }
@@ -51,6 +60,7 @@ h1 {
 }
 .units-list {
     line-height: 1.75em;
+    margin: 0;
 }
 .css-units {
     color: #8b0000;
@@ -71,10 +81,10 @@ h1 {
     color: white;
     text-decoration: none;
     
+    padding: 0 0.5em;
 }
 .nav-list > li {
     line-height: 2em;
-    padding: 0 0.5em;
     background-color: #808080;
     margin-bottom: 0.5em;
     color: white;
