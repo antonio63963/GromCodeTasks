@@ -2,7 +2,10 @@ main {
     display: flex;
     
 }
-picture {
+source, img {
     max-width: 100%;
+    
+}
+picture {
     margin: auto;
 }
