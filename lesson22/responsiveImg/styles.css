@@ -2,6 +2,6 @@ body {
     display: flex;
     justify-content: center;
 }
-img, source {
+picture {
     max-width: 100%;
 }
