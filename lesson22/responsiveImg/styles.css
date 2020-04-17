@@ -1,0 +1,7 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+img, source {
+    max-width: 100%;
+}
