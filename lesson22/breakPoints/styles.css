@@ -19,6 +19,7 @@ span {
 }
 .navigation, .products-list, .news {
     height: 200px;
+    /* width: auto; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -27,12 +28,16 @@ span {
     .firstTwo {
         display: flex;
         flex-grow: 2;
-        
     }
+    /* .navigation {
+        width: calc(100vw / 2);
+    } */
 }
 @media screen and (min-width: 900px) {
     main {
         display: flex;
-
+    }
+    .navigation, .products-list, .news {
+        width: calc(100vw / 3);
     }
 }
