@@ -2,8 +2,9 @@
     box-sizing: border-box;
 }
 
-body {
+.container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -23,7 +24,7 @@ body {
 }
 @media screen and (orientation: landscape) {
     .container {
-        display: flex;
+        flex-direction: row;
         
     }
 }
