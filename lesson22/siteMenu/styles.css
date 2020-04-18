@@ -13,12 +13,12 @@ html {
     background-color: #eee;
 }
 
-.btn-header {
+button.btn-header {
     font-size: 2em;
     /* padding: 0; */
     border: none;
     outline: none;
-    background-color: none;
+    background: none;
     cursor: pointer;
 }
 .nav-list {
