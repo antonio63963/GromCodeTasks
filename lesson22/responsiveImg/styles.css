@@ -5,8 +5,10 @@ main {
     display: flex;
     
 }
-
+source, img {
+    max-width: 100%;
+    
+}
 picture {
     margin: auto;
-    max-width: 100%;
 }
