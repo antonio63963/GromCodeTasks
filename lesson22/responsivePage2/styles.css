@@ -100,14 +100,15 @@ html {
     color: white;
 }
 
-.section>p {
+/* .section>p {
     margin-top: 0;
-}
+} */
 source, img {
     max-width: 100%;
     /* flex-shrink: 1; */
     flex: 0 1 auto;
     box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+
 }
 .middleResolution {
     display: flex;
