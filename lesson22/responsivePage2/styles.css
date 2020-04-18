@@ -45,16 +45,6 @@ html {
     padding: 0.5em;
     height: 100%;
 }
-.news {
-    padding: 0 0.5em;
-    height: 100%;
-}
-
-.navigation {
-    /* width: 20%; */
-
-}
-
 .section {
     /* width: 60%; */
     font-size: 1.25em;
@@ -138,7 +128,6 @@ source, img {
     }
     .news {
         width: 20vw;
-        padding: 0.5em;
     }
     .section {
         width: 60vw;
