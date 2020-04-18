@@ -1,3 +1,6 @@
+* {
+    box-sizing: border-box;
+}
 html {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
@@ -10,9 +13,9 @@ html {
     background-color: #eee;
 }
 .heder-icon {
-    font-size: 2em;
 }
 .btn-header {
+    font-size: 2em;
     padding: 0;
     border: none;
     outline: none;
@@ -26,7 +29,7 @@ html {
 .nav-list > li {
     background-color: #808080;
     line-height: 2em;
-    margin: 0.5em;
+    margin: 0.5em 0;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
