@@ -6,9 +6,9 @@ main {
     
 }
 source, img {
-    max-width: 100%;
     flex: 0 1 auto;
     
+    max-width: 100%;
 }
 picture {
     margin: auto;
