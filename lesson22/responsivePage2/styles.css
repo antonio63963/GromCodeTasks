@@ -111,7 +111,7 @@ source, img {
 @media screen and (min-width: 600px) {
     .middleResolution {
         flex-direction: row;
-        margin-bottom: 1.5em;
+        margin-bottom: 1em;
     }
     .navigation {
         width: 20vw;
