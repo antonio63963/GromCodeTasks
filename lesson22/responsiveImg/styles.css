@@ -3,13 +3,17 @@
 }
 main {
     display: flex;
+    justify-content: center;
     
-}
-source, img {
-    flex: 0 1 auto;
-    
-    max-width: 100%;
 }
 picture {
-    margin: auto;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    /* margin: auto; */
+}
+source, img {
+    /* max-width: 100%; */
+    flex: 0 1 auto;
+    
 }
