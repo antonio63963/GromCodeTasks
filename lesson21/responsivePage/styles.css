@@ -20,7 +20,7 @@ html {
     flex-direction: column;
     align-items: center;
     background-image: linear-gradient(60deg, red, orange);
-    flex: 0 0 auto;
+    /* flex: 0 0 auto; */
     color: white;
 }
 
