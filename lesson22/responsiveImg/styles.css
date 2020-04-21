@@ -10,10 +10,10 @@ picture {
     width: 100vw;
     display: flex;
     justify-content: center;
-    /* margin: auto; */
 }
 source, img {
-    /* max-width: 100%; */
+    max-width: 100%;
     flex: 0 1 auto;
+    
     
 }
