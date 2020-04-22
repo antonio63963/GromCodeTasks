@@ -17,6 +17,6 @@ picture {
 
 img {
     max-width: 100%;
-    flex-grow: 1 1 auto;
+    height: auto;
 
 }
