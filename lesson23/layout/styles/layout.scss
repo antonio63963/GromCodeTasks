@@ -1,0 +1,45 @@
+$first: #ff7f50;
+$second: #006400;
+$third: #0ff;
+$bgc-span: #faebd7;
+$div-height: 200px;
+$text-padding: 8px;
+$b-radius: 4px;
+
+@import 'mixins.scss';
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100vw;
+    @include large-size {
+        flex-direction: row;
+    }
+
+    &__section {
+        display: flex;
+        flex-direction: column;
+        flex: 2 0 auto;
+        @include middle-size {
+            flex-direction: row;
+        }
+        .first {
+            background-color: $first;
+            flex: 1 0 auto;
+            min-width: calc(100vw / 3);
+        }
+
+        .second {
+            background-color: $second;
+            flex: 1 0 auto;
+            min-width: calc(100vw / 3);
+        }
+    }
+
+    .third {
+        background-color: $third;
+        flex: 1 0 auto;
+        min-width: calc(100vw / 3);
+    }
+}

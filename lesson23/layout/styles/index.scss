@@ -1,0 +1,18 @@
+@import 'layout.scss';
+
+* {
+    box-sizing: border-box;
+    text-transform: lowercase;
+    font-family: verdana;
+}
+div {
+    height: $div-height;
+    text-align: center;
+    span {
+        line-height: $div-height;
+        background-color: $bgc-span;
+        padding: $text-padding;
+        border-radius: $b-radius;
+    }
+    // width: auto;
+}
