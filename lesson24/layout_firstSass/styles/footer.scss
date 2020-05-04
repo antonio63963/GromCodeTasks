@@ -1,0 +1,258 @@
+.footer {
+    width: 100%;
+    background-color: #fff;
+    margin-top: auto;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+
+    .logo {
+        display: none;
+
+        @include for-large-up {
+            display: flex;
+            align-items: center;
+            
+        }
+
+        &__text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__name {
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 25px;
+        }
+
+        &__description {
+            font-size: 18px;
+            line-height: 26px;
+            color: $text-color-ligthtgrey;
+        }
+    }
+
+    &__description {
+        display: none;
+        width: 360px;
+        line-height: 26px;
+        font-size: 18px;
+        color: $text-color-ligthtgrey;
+        margin: 26px 0 25px 0;
+
+        @include for-large-up {
+            display: inline-block;
+        }
+    }
+
+    &__line {
+        display: none;
+        border-bottom: 1px 0 0 0 solid $text-color-base;
+        width: 100%;
+        opacity: 0.1;
+        margin: 0;
+
+        @include for-large-up {
+            display: inline-block;
+        }
+    }
+
+    @include for-large-up {
+        width: 1400px;
+    }
+
+}
+
+/* foot column 1 */
+.footer-navigation {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include for-large-up {
+        width: 1140px;
+        height: 338px;
+        flex-direction: row;
+        align-items: center;
+    }
+
+}
+
+.about-company {
+    margin-top: 40px;
+
+    @include for-large-up {
+        margin-top: 44px;
+        margin: 52px 126px 59px 130px;
+    }
+}
+
+
+.dwnloads {
+    margin-top: 31px;
+
+    &>a:last-child {
+        margin-left: 10px;
+    }
+
+    @include for-large-up {
+        margin-top: 0px;
+        flex-direction: row;
+    }
+}
+
+/* column2 */
+.additional-navigation {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid #E3E3E3;
+    width: 100%;
+    padding: 0 15px;
+
+    @include for-large-up {
+        padding: 0;
+        margin-top: 60px;
+        margin-bottom: 47px;
+        display: flex;
+        flex-direction: row;
+        /* align-items: center; */
+        border: none;
+    }
+
+    &__column {
+        width: 265px;
+        margin-top: 30px;
+
+        @include for-large-up {
+            margin-top: 0;
+        }
+    }
+
+    & ul {
+        padding: 0;
+    }
+
+    & li,
+    & a {
+        text-decoration: none;
+        list-style-type: none;
+        line-height: 30px;
+        font-size: 18px;
+        color: $text-color-ligthtgrey;
+    }
+
+    &__title {
+        margin: 0 0 18px 0;
+        font-size: 22px;
+        line-height: 28px;
+    }
+
+}
+
+
+.nav-second-column {
+    margin-left: 0px;
+
+    @include for-large-up {
+        margin-left: 29px;
+    }
+
+}
+
+.footer-links {
+    /* height: 50px; */
+    width: 1140px;
+    margin: 0 auto;
+    line-height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 15px;
+
+    @include for-large-up {
+        height: 50px;
+        width: 1140px;
+        margin: 0 auto;
+        line-height: 50px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0;
+    }
+
+
+}
+
+.terms {
+    margin-top: 31px;
+    width: 185px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include for-large-up {
+        margin-top: 0px;
+    }
+
+    &__items {
+        text-decoration: none;
+        font-size: 14px;
+        line-height: 22px;
+        color: $text-color-ligthtgrey;
+    }
+}
+
+
+.social-links {
+    width: 97px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 22px;
+
+    @include for-large-up {
+        margin-top: 9px;
+        margin-bottom: 0px;
+    }
+
+    &__item {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+/* mobile */
+
+.logo-vertical {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include for-large-up {
+        display: none;
+    }
+
+    &__img {
+        width: 60px;
+        height: 60px;
+    }
+
+    &__title {
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 25px;
+        margin-top: 20px;
+    }
+
+    &__description {
+        font-size: 18px;
+        line-height: 25px;
+        color: $text-color-ligthtgrey;
+    }
+}

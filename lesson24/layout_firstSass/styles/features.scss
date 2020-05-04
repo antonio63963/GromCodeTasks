@@ -1,0 +1,122 @@
+.features {
+    display: none;
+    position: relative;
+    margin-top: 81px;
+
+    @include for-large-up {
+        display: block;
+        position: relative;
+        margin-top: 81px;
+    }
+
+    &__content {
+        width: 1140px;
+        margin: auto;
+        display: flex;
+        margin-bottom: 103px;
+    }
+
+    &__culomn {
+        width: 462px;
+    }
+
+    &__subtitle {
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 34px;
+        color: $text-color-green;
+        margin: 0;
+    }
+
+    &__title {
+        width: 462px;
+        font-weight: bold;
+        font-size: 56px;
+        line-height: 56px;
+        letter-spacing: -0.5px;
+        margin-top: 24px;
+        margin-bottom: 0;
+    }
+
+    &__description {
+        font-size: 24px;
+        line-height: 34px;
+        width: 461px;
+        margin-top: 30px;
+        margin-bottom: 0;
+    }
+
+    /* advantage */
+    &__advantage {
+
+        margin-top: 42px;
+    }
+
+    &__advantage-title {
+        display: inline-block;
+        margin-left: 15px;
+        margin: 0;
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 26px;
+        color: #3142C6;
+    }
+
+    &__advantage-title-img {
+        vertical-align: sub;
+    }
+
+    &__advantage-text {
+        font-size: 18px;
+        line-height: 26px;
+        width: 459px;
+        margin-top: 8px;
+    }
+
+    &__advantage-text_line {
+        background: #3142C6;
+        height: 3px;
+        width: 457px;
+        margin: auto;
+    }
+
+    &__advatage-items {
+        display: flex;
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 26px;
+        margin-top: 20px;
+    }
+
+    &__advatage-items>span {
+        margin-left: 15px;
+    }
+
+    &__advantage-thinLine {
+        border-top: 1px solid $text-color-base;
+        opacity: 0.15;
+        margin-top: 22px;
+        margin-bottom: 0;
+    }
+    &__halfHeadPic {
+        position: absolute;
+        top: 258px;
+        bottom: 178px;
+        /* left: -130px; */
+        height: 166px;
+    }
+    
+    &__pointerPic {
+        position: absolute;
+        top: 350px;
+        left: 405px;
+        /* bottom: 232px; */
+    }
+    
+    &__baner {
+        position: absolute;
+        /* height: 597px; */
+        /* margin-left: 126px; */
+        right: 0;
+    }
+}

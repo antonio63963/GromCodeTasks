@@ -1,0 +1,38 @@
+.action-button {
+    width: 160px;
+    height: 48px;
+    background-color: #3040C4;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 13px;
+    border-radius: 2px;
+
+    @include for-large-up {
+        width: 160px;
+        height: 48px;
+        background-color: #3040C4;
+        border: none;
+        color: #fff;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 13px;
+        border-radius: 2px;
+        margin-left: 56px;
+        margin-bottom: 14px;
+    }
+}
+
+.action-button-white {
+    width: 158px;
+    height: 48px;
+    background-color: #fff;
+    border: none;
+    color: #3040C4;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 13px;
+    border-radius: 2px;
+
+}

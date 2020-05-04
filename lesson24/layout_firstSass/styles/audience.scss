@@ -1,0 +1,136 @@
+.audience {
+    // width: 100%;
+    background-color: $bg-teal-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 15px;
+
+    &__title {
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 34px;
+        margin: 0;
+        // margin-top: 50px;
+    }
+
+    &__header {
+        max-width: 555px;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 40px;
+        text-align: center;
+        letter-spacing: -0.357143px;
+        margin: 0;
+        margin-top: 17px;
+
+        @include for-large-up {
+            font-size: 56px;
+            line-height: 56px;
+            text-align: center;
+            letter-spacing: -0.5px;
+            // width: 555px;
+        }
+    }
+
+    &__text {
+        max-width: 555px;
+        font-size: 24px;
+        line-height: 34px;
+        text-align: center;
+        margin: 0;
+        margin-top: 18px;
+    }
+
+    &__wrapper-card {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        flex-shrink: 1;
+        @include for-large-up {
+            margin-top: 96px;
+        }
+        // margin: auto;
+
+    }
+
+    &__btn-group {
+        margin-top: 18px;
+        min-width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        @include for-large-up {
+            margin-top: 22px;
+        }
+
+        &_action-btn {
+            margin: 12px 0px 0;
+            // margin-top: 12px;
+            width: 100%;
+
+            @include for-large-up {
+                width: 160px;
+                margin-left: 10px;
+            }
+        }
+    }
+
+    & .action-button-white {
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 1e-05) 100%), #FFFFFF;
+        background-blend-mode: overlay, normal;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.05), 0px 1px 3px rgba(0, 0, 0, 0.1), inset 0px 1px 0px rgba(255, 255, 255, 0.1);
+    }
+
+    & .card-title {
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 28px;
+        text-align: center;
+        margin-top: 22px;
+    }
+}
+
+.wrapper-card__row {
+    // 40px-15px(margin card)
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    @include for-large-up {}
+
+    &_card {
+        width: 290px;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 1;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 1e-05) 100%), #FFFFFF;
+        background-blend-mode: overlay, normal;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.05), 0px 1px 3px rgba(0, 0, 0, 0.1), inset 0px 1px 0px rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        margin: 0;
+        margin: 15px;
+
+        @include for-large-up {
+            width: 262px;
+
+        }
+    }
+
+    &_card:hover {
+        background: none;
+        background-color: #3141C5;
+        box-shadow: 0px 11px 55px rgba(0, 0, 0, 0.07), 0px 13px 18px rgba(0, 0, 0, 0.15);
+        color: #fff;
+    }
+}
+
+.card-img {
+    max-width: 100%;
+
+}
