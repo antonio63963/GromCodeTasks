@@ -10,10 +10,11 @@
 @import 'header.scss';
 @import 'order.scss';
 @import 'audience.scss';
+@import 'quote.scss';
 
 
 body {
-    
+
     font-family: 'Work Sans', sans-serif;
     font-size: 16px;
     color: $text-color-base;
@@ -22,23 +23,42 @@ body {
 * {
     box-sizing: border-box;
 }
+
 .page {
     // margin: 0 auto;
     max-width: 100%;
-    // overflow-x: hidden;
+    overflow-x: hidden;
     display: flex;
     flex-direction: column;
+
     @include for-large-up {
         width: 1400px;
         margin: auto;
-        
+
         min-height: 100vh;
     }
 }
-// @media screen and (min-width: 400px) {
 
-//     .page {
-       
-//         /* overflow: hidden; */
-//     }
-// }
+.text-paragraph {
+    font-size: 24px;
+    line-height: 34px;
+}
+
+.subtitle-text {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 34px;
+}
+
+.title-text {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 40px;
+    letter-spacing: -0.357143px;
+
+    @include for-large-up {
+        font-size: 56px;
+        line-height: 56px;
+        letter-spacing: -0.5px;
+    }
+}

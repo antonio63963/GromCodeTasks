@@ -1,0 +1,129 @@
+.quote {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    padding: 50px 15px 48px 15px;
+    background-color: $bg-ligt-red-color;
+
+    @include for-large-up {
+        max-width: 1400px;
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+    }
+
+    // .quote__img
+
+
+
+
+    // .quote__culomn
+
+
+    &__culomn-image {
+        // max-width: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-shrink: 1;
+        @include for-large-up {
+
+            margin: 142px 0 101px 193px;
+        }
+    }
+
+    &__image {
+        max-width: 100%;
+        // height: auto;
+        // flex-shrink: 1;
+    }
+
+    &__image-description {
+        display: none;
+
+        @include for-large-up {
+            display: inline-block;
+            // max-width: 100%;
+            // text-align: center;
+            margin-top: 15px;
+        }
+    }
+
+    &__culomn-inbox {
+        display: flex;
+        flex-direction: column;
+        max-width: 519px;
+        @include for-large-up {
+        margin: 115px 0 116px 164px;
+        }
+    }
+   
+    // .quote__subtitle
+
+    &__subtitle {
+        color: $text-color-orange;
+        margin: 0;
+        margin-top: 32px;
+    }
+
+    // .quote__title
+
+    &__title {
+        margin: 0;
+        margin-top: 17px;
+    }
+
+    // .quote__text
+
+    &__text {
+        margin: 0;
+        margin-top: 18px;
+    }
+}
+
+.recall {
+    margin: 0;
+    margin-top: 30px;
+    padding: 30px 20px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 1e-05) 100%), #FFFFFF;
+    background-blend-mode: overlay, normal;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.05), 0px 1px 3px rgba(0, 0, 0, 0.1), inset 0px 1px 0px rgba(255, 255, 255, 0.1);
+    border-bottom: 4px solid $border-blue-color;
+    // .recall__person
+
+    &__person {
+        display: flex;
+        align-items: flex-start;
+        margin-top: 26px;
+    }
+
+    &__text {
+        font-size: 20px;
+        line-height: 28px;
+        margin: 0;
+    }
+}
+
+
+.person-avatar {
+    max-width: 100%;
+}
+
+.person-info {
+    margin-left: 11px;
+}
+
+.person-name {
+    margin: 0;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.peson-description {
+    margin: 0;
+    font-size: 16px;
+    line-height: 22px;
+    color: $text-color-ligthtgrey;
+}

@@ -97,15 +97,6 @@
   flex-wrap: wrap;
   justify-content: center;
 }
-@media screen and (min-width: 1400px) {
-  .customers__logos-wrapper {
-    width: 1140px;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-}
 .customers__row {
   width: 100%;
   display: flex;
@@ -145,6 +136,25 @@
   .customers__item > img {
     display: inline-block;
     max-width: 100%;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .logos-wrapper_mobile {
+    display: none;
+  }
+}
+
+.logos-wrapper_desktop {
+  display: none;
+}
+@media screen and (min-width: 1400px) {
+  .logos-wrapper_desktop {
+    width: 1140px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 
@@ -501,7 +511,7 @@
 }
 
 .tips {
-  margin: 8px;
+  margin: 8px 8px 0;
   display: flex;
 }
 @media screen and (min-width: 1400px) {
@@ -720,6 +730,8 @@
 }
 .header .logo {
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .header .logo__description {
   display: none;
@@ -986,6 +998,11 @@
   background-blend-mode: overlay, normal;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.05), 0px 1px 3px rgba(0, 0, 0, 0.1), inset 0px 1px 0px rgba(255, 255, 255, 0.1);
 }
+@media screen and (min-width: 1400px) {
+  .audience .action-button-white {
+    box-shadow: none;
+  }
+}
 .audience .card-title {
   font-weight: bold;
   font-size: 22px;
@@ -1031,6 +1048,111 @@
   max-width: 100%;
 }
 
+.quote {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  padding: 50px 15px 48px 15px;
+  background-color: #FCF0E3;
+}
+@media screen and (min-width: 1400px) {
+  .quote {
+    max-width: 1400px;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+  }
+}
+.quote__culomn-image {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 1;
+}
+@media screen and (min-width: 1400px) {
+  .quote__culomn-image {
+    margin: 142px 0 101px 193px;
+  }
+}
+.quote__image {
+  max-width: 100%;
+}
+.quote__image-description {
+  display: none;
+}
+@media screen and (min-width: 1400px) {
+  .quote__image-description {
+    display: inline-block;
+    margin-top: 15px;
+  }
+}
+.quote__culomn-inbox {
+  display: flex;
+  flex-direction: column;
+  max-width: 519px;
+}
+@media screen and (min-width: 1400px) {
+  .quote__culomn-inbox {
+    margin: 115px 0 116px 164px;
+  }
+}
+.quote__subtitle {
+  color: #F1592B;
+  margin: 0;
+  margin-top: 32px;
+}
+.quote__title {
+  margin: 0;
+  margin-top: 17px;
+}
+.quote__text {
+  margin: 0;
+  margin-top: 18px;
+}
+
+.recall {
+  margin: 0;
+  margin-top: 30px;
+  padding: 30px 20px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.00001) 100%), #FFFFFF;
+  background-blend-mode: overlay, normal;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.05), 0px 1px 3px rgba(0, 0, 0, 0.1), inset 0px 1px 0px rgba(255, 255, 255, 0.1);
+  border-bottom: 4px solid #0185D0;
+}
+.recall__person {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 26px;
+}
+.recall__text {
+  font-size: 20px;
+  line-height: 28px;
+  margin: 0;
+}
+
+.person-avatar {
+  max-width: 100%;
+}
+
+.person-info {
+  margin-left: 11px;
+}
+
+.person-name {
+  margin: 0;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.peson-description {
+  margin: 0;
+  font-size: 16px;
+  line-height: 22px;
+  color: rgba(43, 41, 45, 0.6);
+}
+
 body {
   font-family: "Work Sans", sans-serif;
   font-size: 16px;
@@ -1043,6 +1165,7 @@ body {
 
 .page {
   max-width: 100%;
+  overflow-x: hidden;
   display: flex;
   flex-direction: column;
 }
@@ -1051,6 +1174,31 @@ body {
     width: 1400px;
     margin: auto;
     min-height: 100vh;
+  }
+}
+
+.text-paragraph {
+  font-size: 24px;
+  line-height: 34px;
+}
+
+.subtitle-text {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 34px;
+}
+
+.title-text {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 40px;
+  letter-spacing: -0.357143px;
+}
+@media screen and (min-width: 1400px) {
+  .title-text {
+    font-size: 56px;
+    line-height: 56px;
+    letter-spacing: -0.5px;
   }
 }
 
