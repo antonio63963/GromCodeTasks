@@ -1,0 +1,115 @@
+.price-tables {}
+
+.table {}
+
+.price-card {
+    position: relative;
+    background-color: $bg-color-grey;
+    width: 380px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    margin: 18px;
+
+
+
+    &__title {
+        text-align: center;
+        margin-top: 33px;
+
+        &_bold {
+            margin: 0;
+            font-weight: 700;
+            font-size: 35px;
+            line-height: 43px;
+
+        }
+
+        &_regular {
+            font-size: 20px;
+            line-height: 24px;
+        }
+    }
+
+    // .price-card__price
+
+    &__price_green {
+        background-color: $bg-color-green;
+        margin-top: 33px;
+    }
+    &__price_blue {
+        background-color: $bg-color-blue;
+        margin-top: 33px;
+    }
+    &__price_orange {
+        background-color: $bg-color-orange;
+        margin-top: 33px;
+    }
+
+    // .price-card__description
+
+    &__description {
+        font-size: 15px;
+        line-height: 18px;
+        text-align: center;
+        margin: 0;
+        margin-top: 40px;
+        width: 327px;
+        align-self: center;
+    }
+
+    // .price-card__options-list
+
+    &__options-list {
+        margin-top: 40px;
+    }
+
+    &__action-btn_green {
+        background-color: $bg-color-green;
+        margin: 39px auto 40px;
+    }
+    &__action-btn_blue{
+        background-color: $bg-color-blue;
+        margin: 39px auto 40px;
+    }
+    &__action-btn_orange {
+        background-color: $bg-color-orange;
+        margin: 39px auto 40px;
+    }
+}
+
+
+.options-list {
+
+    // .options-list__item
+
+    &__item {
+        height: 50px;
+        display: flex;
+        align-items: center;
+    }
+
+    &__item:nth-child(odd) {
+        background-color: $bg-color-dark-grey;
+    }
+
+    // .options-list__item-checked
+
+    &__item-checked-icon {
+        margin: 0 22px;
+        width: 15px;
+        height: 13px;
+        
+    }
+
+    &__item_text {
+        font-size: 15px;
+        line-height: 18px;
+    }
+    // &__item-checked-img {
+    //     display: block;
+    //     width: 15px;
+    //     height: 13px;
+    //     background-image: url('https://gromcode.s3.eu-central-1.amazonaws.com/front-end/html-css/lesson+25/verification-checkmark-symbol_blue.png');
+    // }
+}

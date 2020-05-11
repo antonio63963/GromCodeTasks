@@ -1,0 +1,142 @@
+.price-card {
+  position: relative;
+  background-color: #334247;
+  width: 380px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin: 18px;
+}
+.price-card__title {
+  text-align: center;
+  margin-top: 33px;
+}
+.price-card__title_bold {
+  margin: 0;
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 43px;
+}
+.price-card__title_regular {
+  font-size: 20px;
+  line-height: 24px;
+}
+.price-card__price_green {
+  background-color: #5BB189;
+  margin-top: 33px;
+}
+.price-card__price_blue {
+  background-color: #3A6BA5;
+  margin-top: 33px;
+}
+.price-card__price_orange {
+  background-color: #EC632A;
+  margin-top: 33px;
+}
+.price-card__description {
+  font-size: 15px;
+  line-height: 18px;
+  text-align: center;
+  margin: 0;
+  margin-top: 40px;
+  width: 327px;
+  align-self: center;
+}
+.price-card__options-list {
+  margin-top: 40px;
+}
+.price-card__action-btn_green {
+  background-color: #5BB189;
+  margin: 39px auto 40px;
+}
+.price-card__action-btn_blue {
+  background-color: #3A6BA5;
+  margin: 39px auto 40px;
+}
+.price-card__action-btn_orange {
+  background-color: #EC632A;
+  margin: 39px auto 40px;
+}
+
+.options-list__item {
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+.options-list__item:nth-child(odd) {
+  background-color: #2A3438;
+}
+.options-list__item-checked-icon {
+  margin: 0 22px;
+  width: 15px;
+  height: 13px;
+}
+.options-list__item_text {
+  font-size: 15px;
+  line-height: 18px;
+}
+
+html {
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+.page {
+  background-color: #141b1c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vw;
+}
+
+.price-tables {
+  display: flex;
+}
+
+.price-block {
+  height: 105px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 55px;
+  line-height: 67px;
+}
+
+.action-btn {
+  border-radius: 20px;
+  padding: 11px 26px;
+  width: 155px;
+  height: 40px;
+  height: 40px;
+  border: none;
+}
+.action-btn__text {
+  font-size: 14px;
+  line-height: 17px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.text-decor {
+  text-decoration: underline;
+}
+
+.popular {
+  position: absolute;
+  left: 255px;
+  top: 30px;
+  background-color: #DC3F45;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  height: 25px;
+  width: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(45deg);
+}
+
+/*# sourceMappingURL=styles.css.map */

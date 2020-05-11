@@ -1,0 +1,73 @@
+@import 'variables.scss';
+@import 'table.scss';
+
+
+
+html {
+    font-family: 'Montserrat', sans-serif;
+    color: $text-color-primary;
+    box-sizing: border-box;
+}
+
+.page {
+    background-color: #141b1c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vw;
+
+}
+
+.price-tables {
+    display: flex;
+}
+
+.price-block {
+    height: 105px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 55px;
+    line-height: 67px;
+}
+
+.action-btn {
+    border-radius: 20px;
+    padding: 11px 26px;
+    width: 155px;
+    height: 40px;
+    height: 40px;
+    border: none;
+    // padding-top: 11px;
+
+    &__text {
+
+        font-size: 14px;
+        line-height: 17px;
+        color: $text-color-primary;
+        text-transform: uppercase;
+    }
+}
+
+.text-decor {
+    text-decoration: underline;
+}
+
+.popular {
+    position: absolute;
+    left: 255px;
+    top: 30px;
+    background-color: $bg-color-red;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    height: 25px;
+    width: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(45deg);
+ 
+
+}
