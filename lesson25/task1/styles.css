@@ -127,6 +127,7 @@ html {
 }
 
 .popular {
+  padding-top: 4px;
   position: absolute;
   left: 255px;
   top: 30px;
