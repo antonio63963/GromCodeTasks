@@ -10,12 +10,12 @@ html {
 }
 
 .page {
+    height: 100vh;
     background-color: #141b1c;
     display: flex;
     padding: 115px 126px;
-    // justify-content: center;
-    // align-items: center;
-    height: 100vw;
+    justify-content: center;
+    align-items: center;
     
 }
 
