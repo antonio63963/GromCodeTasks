@@ -99,7 +99,7 @@ html {
 .page {
   background-color: #141b1c;
   display: flex;
-  align-items: center;
+  padding: 115px 126px;
   height: 100vw;
 }
 
