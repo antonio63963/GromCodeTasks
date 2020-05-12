@@ -1,5 +1,5 @@
 .price-tables {
-    margin: 115px auto;
+    margin: 0px auto;
 }
 
 .table {}
@@ -35,7 +35,15 @@
     }
 
     // .price-card__price
-
+    &__price {
+        height: 105px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 55px;
+    line-height: 67px;
+    }
     &__price_green {
         background-color: $bg-color-green;
         margin-top: 33px;

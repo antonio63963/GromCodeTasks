@@ -1,5 +1,5 @@
 .price-tables {
-  margin: 115px auto;
+  margin: 0px auto;
 }
 
 .price-card {
@@ -25,6 +25,15 @@
 .price-card__title_regular {
   font-size: 20px;
   line-height: 24px;
+}
+.price-card__price {
+  height: 105px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 55px;
+  line-height: 67px;
 }
 .price-card__price_green {
   background-color: #5BB189;
@@ -90,21 +99,12 @@ html {
 .page {
   background-color: #141b1c;
   display: flex;
-  height: 100%;
+  align-items: center;
+  height: 100vw;
 }
 
 .price-tables {
   display: flex;
-}
-
-.price-block {
-  height: 105px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  font-size: 55px;
-  line-height: 67px;
 }
 
 .action-btn {
