@@ -93,7 +93,7 @@ html {
 }
 
 .page {
-  height: 100vh;
+  max-height: 100vh;
   background-color: #141b1c;
   display: flex;
   padding: 115px 126px;
