@@ -1,11 +1,16 @@
+.price-tables {
+  margin: 115px auto;
+}
+
 .price-card {
   position: relative;
   background-color: #334247;
   width: 380px;
+  height: 770px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  margin: 18px;
+  margin: 0px 9px;
 }
 .price-card__title {
   text-align: center;
@@ -85,9 +90,7 @@ html {
 .page {
   background-color: #141b1c;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vw;
+  height: 100%;
 }
 
 .price-tables {

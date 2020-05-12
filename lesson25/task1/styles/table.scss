@@ -1,4 +1,6 @@
-.price-tables {}
+.price-tables {
+    margin: 115px auto;
+}
 
 .table {}
 
@@ -6,10 +8,11 @@
     position: relative;
     background-color: $bg-color-grey;
     width: 380px;
+    height: 770px;
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    margin: 18px;
+    margin: 0px 9px ;
 
 
 
