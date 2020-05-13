@@ -1,0 +1,9 @@
+
+$lg-screen: 1024px;
+
+@mixin for-large-screen {
+    @media screen and (min-width: $lg-screen) {
+        @content;
+    }
+    
+}
