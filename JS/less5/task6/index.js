@@ -5,7 +5,7 @@ function getPrimes(num) {
             console.log(i);
             // console.log(Math.sign(i));
         } else {
-            continue;
+            break;
         }
     }
     
