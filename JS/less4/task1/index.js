@@ -1,7 +1,3 @@
-const n = 150;
-let sum =0;
-
-for(let i = 1; i <= n; i++) {
-    sum += i;
+function sum (a, b) {
+    return a + b;
 }
-console.log('Result: ' + sum);
