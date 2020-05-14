@@ -1,6 +1,6 @@
 console.log('+17: ', +17);
 console.log('+\'77\': ', +77);
-console.log('10 + 5: ', 10 +5);
+console.log('10 + \'5\': ', 10 +'5');
 console.log('\'some\' + \'text\': ', 'some' + 'text');
 console.log('undefined +1: ', undefined + 1);
 console.log('null + 8: ', null +8);
@@ -16,7 +16,7 @@ const a = 17;
 const b = -a;
 console.log('-a: ', -a);
 
-console.log('\'24\'/ 4: ', 24/4);
+console.log('\'24\'/ 4: ', '24'/4);
 console.log('18 * \'3\': ', 18 * '3');
 console.log('\'9\'-\'3\': ', '9' - '3');
 console.log('\'seventeen\' / 3: ', 'seventeen' / 3);
