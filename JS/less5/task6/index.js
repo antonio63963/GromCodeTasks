@@ -1,7 +1,7 @@
 function getPrimes(num) {
     
     for(let i = 2; i <= num; i++) {
-        if(i % i === 0) {
+        if(i % i === 0 && i % 1 === 0) {
             console.log(i);
         } else {
             continue;
@@ -9,4 +9,5 @@ function getPrimes(num) {
     }
     
 }
+// console.log(getPrimes(10));
 
