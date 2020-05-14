@@ -1,5 +1,5 @@
 const n = 25;
-let sum = 0;
+let sum = '';
 
 for(let i = 1; i <= n; i++) {
     sum += String(i);
