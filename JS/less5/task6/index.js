@@ -1,17 +1,15 @@
 function getPrimes(num) {
-    
-    for(let i = 2; i <= num; i++) {
+Primes:
+    for (let i = 2; i <= num; i++) {
       
-        for(let j = 2; j < i; j++) {
-            if(i % j !== 0) {
-                console.log(i);
-                
-            } else {
-                break;
+            for (let j = 2; j < i; j++) {
+                if (i % j == 0) {
+                    continue Primes;
+                }                
             }
-        }
+            console.log(i);
+        
     }
-    
-}
-// console.log(getPrimes(15));
 
+}
+console.log(getPrimes(17));
