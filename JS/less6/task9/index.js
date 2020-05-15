@@ -1,9 +1,11 @@
 // let arr = [10, 2, 3, 4];
 function reverseArray(arr) {
-    let [...newArr] = arr;
-       if(Array.isArray(newArr)) {
-       return newArr.reverse();
-    } else { return null;}
+    if (Array.isArray(arr)) {
+        let [...newArr] = arr;
+        return newArr.reverse();
+    } else {
+        return null;
+    }
 }
 
 // let newArr = reverseArray(arr);
