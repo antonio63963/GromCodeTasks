@@ -12,4 +12,4 @@ Primes:
     }
 
 }
-console.log(getPrimes(17));
+// console.log(getPrimes(17));
