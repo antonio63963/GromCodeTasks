@@ -21,7 +21,7 @@ function isPrimeNum(num) {
         }
     }
     if (rightNum === true) {
-        // console.log(num);
+        
         return num;
     }
 }
