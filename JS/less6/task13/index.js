@@ -1,7 +1,7 @@
 // let clients = ['john', 'Bill', 'Mik', 'Ann'];
 // let balances = [1400, 2000, 44987, 343];
 
-function withsdraw(clients, balances, client, amount) {
+function withdraw(clients, balances, client, amount) {
     let name = client;
 
     for (let i = 0; i < clients.length; i++) {
@@ -17,5 +17,5 @@ function withsdraw(clients, balances, client, amount) {
     }
 }
 
-// let example = withsdraw(clients, balances, 'Bill', 150);
+// let example = withdraw(clients, balances, 'Bill', 150);
 // console.log(example, '  ', balances);
