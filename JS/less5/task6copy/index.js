@@ -21,18 +21,20 @@ function isPrimeNum(num) {
         }
     }
     if (rightNum === true) {
-        
+        // console.log(num);
         return num;
     }
 }
 
-// let num = isPrimeNum(3);
+// let num = isPrimeNum(15);
 // console.log(num);
 
 function getPrimes(num) {
-    for (let i = 2; i <= num; i++) {
-        console.log(isPrimeNum(i));
+    for (let i = 4; i <= num; i++) {
+        if (typeof isPrimeNum(i) !== 'undefined') {
+            console.log(isPrimeNum(i));
+        }
     }
 }
 
-// getPrimes(20);
+getPrimes(20);
