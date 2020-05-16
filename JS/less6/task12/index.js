@@ -8,6 +8,7 @@ function sortAsc(arr) {
     } else {
         return null;
     }
+    return arr;
 }
 
 function sortDesc(arr) {
@@ -18,8 +19,8 @@ function sortDesc(arr) {
     } else {
         return null;
     }
-
+    return arr;
 }
 
 // sortAsc(arr);
-// console.log(arr);
+// console.log(sortAsc(arr));
