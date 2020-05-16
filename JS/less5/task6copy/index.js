@@ -30,11 +30,11 @@ function isPrimeNum(num) {
 // console.log(num);
 
 function getPrimes(num) {
-    for (let i = 4; i <= num; i++) {
+    for (let i = 2; i <= num; i++) {
         if (typeof isPrimeNum(i) !== 'undefined') {
             console.log(isPrimeNum(i));
         }
     }
 }
 
-// getPrimes(20);
+// getPrimes(100);
