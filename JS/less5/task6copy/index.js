@@ -37,4 +37,4 @@ function getPrimes(num) {
     }
 }
 
-getPrimes(20);
+// getPrimes(20);
