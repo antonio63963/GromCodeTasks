@@ -28,7 +28,7 @@ function removeDuplicates(arrNum) {
                 continue;
             }
        }
-    }
+    } else { return null;}
     return newArr;
 }
 
