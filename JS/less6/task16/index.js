@@ -32,6 +32,6 @@ function removeDuplicates(arrNum) {
     return newArr;
 }
 
-// let arr = [10, 33, 45, 53, 33, 23, 33, 23, 33, 53, 53, 53, 33];
+// let arr = [10, 33, 45, 53, 33, 23, 33, 23, 33, 53, 53, 53, 33, '33', [1, 2]];
 // // let n = 13;
 // console.log(removeDuplicates(arr));
