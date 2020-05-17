@@ -7,7 +7,7 @@
 //     }
 // }
 
-function removeDuplicates(arrNum) {
+function uniqueCount(arrNum) {
 
     let newArr = [];
     if (Array.isArray(arrNum)) {
@@ -28,7 +28,7 @@ function removeDuplicates(arrNum) {
                 continue;
             }
        }
-    }
+    } else { return null;}
     return newArr.length;
 }
 
