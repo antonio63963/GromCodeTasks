@@ -27,7 +27,7 @@ const compareObjects = (obj1, obj2) => {
   if (coloneArr1.length == coloneArr2.length) {
     for (let p of coloneArr1) {
       return coloneArr2.indexOf(p) !== -1 &&
-        obj1[p] == obj2[p];
+        obj1[p] == obj2[p] ? true : false;
     }
   } else { return false;}
 }
