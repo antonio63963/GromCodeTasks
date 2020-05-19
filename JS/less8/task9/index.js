@@ -29,7 +29,7 @@ const compareObjects = (obj1, obj2) => {
       return coloneArr2.indexOf(p) !== -1 &&
         obj1[p] == obj2[p];
     }
-  }
+  } else { return false;}
 }
 
 console.log(compareObjects(obj1, obj3));
