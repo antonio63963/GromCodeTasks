@@ -4,7 +4,7 @@ const addPropertyV1 = (obj, key, value) => {
 }
 
 const addPropertyV2 = (obj, key, value) => {
-userData = Object.assign(obj, {[key]:value});
+userData = Object.assign(obj, {[key]: value,});
 return userData;
 };
 
@@ -24,7 +24,7 @@ const obj = {
 };
 
 // console.log(addPropertyV1(obj, 123));
-// console.log(addPropertyV2(obj, 'status', true));
+console.log(addPropertyV2(obj, 'status', true));
 // console.log(addPropertyV3(obj, 123));
-console.log(obj);
-console.log(addPropertyV4(obj, 123));
+// console.log(obj);
+//console.log(addPropertyV4(obj, 123));
