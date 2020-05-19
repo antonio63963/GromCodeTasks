@@ -27,9 +27,9 @@ const compareObjects = (obj1, obj2) => {
   if (coloneArr1.length == coloneArr2.length) {
     for (let p of coloneArr1) {
       return coloneArr2.indexOf(p) !== -1 &&
-        obj1[p] == obj2[p] ? true : false;
+        obj1[p] == obj2[p];
     }
-  } else { return false;}
+  } else { return false}
 }
 
 console.log(compareObjects(obj1, obj3));
