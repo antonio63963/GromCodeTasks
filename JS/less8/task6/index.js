@@ -1,21 +1,21 @@
-const addPropertyV1 = (obj, userid) => {
-  obj.id = userid;
-  return obj;
+const addPropertyV1 = (userData, userid) => {
+  userData.id = userid;
+  return userData;
 }
 
-const addPropertyV2 = (obj, userid) => {
-Object.assign(obj, userid);
-return obj;
+const addPropertyV2 = (userData, userid) => {
+Object.assign(userData, userid);
+return userData;
 };
 
-const addPropertyV3 = (obj, userid) => {
-Object.assign({}, obj, userid);
-return obj;
+const addPropertyV3 = (userData, userid) => {
+Object.assign({}, userData, userid);
+return userData;
 };
 
-const addPropertyV4 = (obj, userid) => {
+const addPropertyV4 = (userData, userid) => {
 
-return [...obj];
+return [...userData];
 };
 
 const obj = {
