@@ -4,8 +4,8 @@ const addPropertyV1 = (obj, key, value) => {
 }
 
 const addPropertyV2 = (obj, key, value) => {
-userData = Object.assign(obj, {[key]: value,});
-return userData;
+return Object.assign(obj, {[key]: value,});
+
 };
 
 const addPropertyV3 = (obj, key, value) => {
