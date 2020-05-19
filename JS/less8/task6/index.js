@@ -4,12 +4,12 @@ const addPropertyV1 = (userData, userid) => {
 }
 
 const addPropertyV2 = (userData, userid) => {
-Object.assign(userData, userid);
+userData = Object.assign(userData, {id: userid});
 return userData;
 };
 
 const addPropertyV3 = (userData, userid) => {
-Object.assign({}, userData, userid);
+Object.assign({}, userData, {id: userid});
 return userData;
 };
 
@@ -24,6 +24,6 @@ const obj = {
 };
 
 // console.log(addPropertyV1(obj, 123));
-// console.log(addPropertyV2(obj, 123));
+console.log(addPropertyV2(obj, 123));
 // console.log(addPropertyV3(obj, 123));
-console.log(addPropertyV4(obj, 123));
+// console.log(addPropertyV4(obj, 123));
