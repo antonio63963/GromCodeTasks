@@ -15,7 +15,7 @@ return userData;
 
 const addPropertyV4 = (userData, userid) => {
 
-return [...userData];
+return {...userData, ...{id: userid,}};
 };
 
 const obj = {
@@ -23,7 +23,7 @@ const obj = {
   age: 999,
 };
 
-console.log(addPropertyV1(obj, 123));
-console.log(addPropertyV2(obj, 123));
-console.log(addPropertyV3(obj, 123));
+// console.log(addPropertyV1(obj, 123));
+// console.log(addPropertyV2(obj, 123));
+// console.log(addPropertyV3(obj, 123));
 console.log(addPropertyV4(obj, 123));
