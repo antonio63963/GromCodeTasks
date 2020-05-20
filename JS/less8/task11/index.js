@@ -1,4 +1,5 @@
-const keyList = ['name', 'active'];
+const keyList = ['name', 'active', 'merried'];
+const wtf = ['dede', 'fdf'];
 const userCard = {
   name: "Bob",
   status: 'manager',
@@ -6,7 +7,7 @@ const userCard = {
   age: 23,
 };
 
-const pickProps = (keyList, userObj) => {
+const pickProps = (userObj, keyList) => {
   let resultObj = {};
   const keyArr = Object.keys(userObj);
 
@@ -15,10 +16,12 @@ const pickProps = (keyList, userObj) => {
       resultObj[key] = userObj[key];
     }
   });
-  
+
   return resultObj;
 };
 
 
 
-console.log(pickProps(keyList, userCard));
+console.log(pickProps(userCard, keyList));
+console.log(userCard);
+console.log(pickProps(userCard, wtf));
