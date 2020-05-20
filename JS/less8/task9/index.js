@@ -37,11 +37,15 @@ const compareObjects = (obj1, obj2) => {
     for (let p of coloneArr1) {
       console.log(obj1[p], '  ', obj2[p]);
       trueFalseArr.push(coloneArr2.indexOf(p) !== -1 &&
-        obj1[p] == obj2[p]);
+        obj1[p] === obj2[p]);
     }
   } else { return false;}
   console.log(trueFalseArr);
-  return trueFalseArr.indexOf('false') !== -1;
+
+  return trueFalseArr.indexOf(false) == -1; 
 };
 
 console.log(compareObjects(obj1, obj4));
+
+// let arrW = [ true, false, true, true ];
+// console.log(arrW.indexOf(false));
