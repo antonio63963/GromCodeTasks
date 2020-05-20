@@ -1,10 +1,11 @@
 const people = {
-  joe: 19,
-  Nik: 17,
-  Ann: 20,
-  Rick: 14,
-  Martin: 22,
-  Julie: 30,
+  'joe': 19,
+  'Nik': 17,
+  'Ann': 20,
+  'Rick': 14,
+  'Martin': 22,
+  'Julie': 30,
+  'frank': 18,
 };
 
 const getAdults = obj => {
