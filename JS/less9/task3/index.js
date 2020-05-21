@@ -12,16 +12,17 @@ const customers = {
         age: 30,
     }
 };
+console.log(customers);
 
-const getCustomersList = obj => {
-const copyObj = {...obj};
- return    Object.entries(copyObj)
+const getCustomersList = obj => 
+     Object.entries({...obj})
     .map(elem => {
-        elem[1].id = elem[0];
-        return elem[1];
+        let copyElem = Object.assign({}, elem[1]);
+        copyElem.id = elem[0];
+        return copyElem;
     })   
     .sort((a, b) => a.age - b.age);
-};   
+    
 
 
 // console.log(getCustomersList(customers));
