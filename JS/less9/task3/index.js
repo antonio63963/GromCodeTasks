@@ -14,7 +14,7 @@ const customers = {
 };
 
 const getCustomersList = obj => 
-     Object.entries(obj)
+     Object.entries({...obj})
     .map(elem => {
         elem[1].id = elem[0];
         return elem[1];
