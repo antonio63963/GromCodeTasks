@@ -1,4 +1,4 @@
-let num = -12.1654;
+
 
 const multiRound = num => [
     Math.floor(num * 100)/100, 
@@ -9,4 +9,4 @@ const multiRound = num => [
    
 ];
 
-console.log(multiRound(num));
+console.log(multiRound(12.1264));
