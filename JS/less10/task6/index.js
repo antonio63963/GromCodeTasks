@@ -11,11 +11,11 @@ const getRandomNumbers = (length, start, end ) => {
         console.log(end - start);
     }
     // проверяю, на всякий случай - вдруг Округлятор не округлил!
-  
+
     arrInt.forEach(item => {
-        if(!Number.isInteger(item)) {
-            arrInt = null;
-        } 
+        if(Number.isInteger(item)) {
+          return  arrInt ;
+        } else { return null}
     });
     return arrInt;
     
