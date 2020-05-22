@@ -1,6 +1,6 @@
 let num = 12.1654;
 
-const multyRound = num => [
+const multiRound = num => [
     Math.floor(num * 100)/100, 
     Math.round(num * 100)/100,
     Math.ceil(num * 100)/100,
@@ -9,4 +9,4 @@ const multyRound = num => [
    
 ];
 
-console.log(multyRound(num));
+console.log(multiRound(num));
