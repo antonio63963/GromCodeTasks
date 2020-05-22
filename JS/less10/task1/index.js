@@ -12,7 +12,7 @@ const getNaN = arr =>
 const getNaNV2 = arr =>
     arr.filter(num => isNaN(num));
 
-const getIntengers = arr =>
+const getIntegers = arr =>
     arr.filter(num => Number.isInteger(num));
 
 
