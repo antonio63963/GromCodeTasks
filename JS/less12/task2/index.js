@@ -9,4 +9,4 @@ const reverseString = string => {
     }
 };
 
-console.log(revrseString('32 437'));
+console.log(reverseString('32 437'));
