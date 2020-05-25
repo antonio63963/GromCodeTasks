@@ -1,6 +1,6 @@
 
 
-const revrseString = string => {
+const reverseString = string => {
     if(typeof string !== 'string') {
         return null;
     } else {
@@ -9,4 +9,4 @@ const revrseString = string => {
     }
 };
 
-console.log(revrseString('myText'));
+console.log(revrseString('32 437'));
