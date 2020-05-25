@@ -1,8 +1,10 @@
 const myString = 'sooooperLoooongStreeenggg';
+const myNewString = "ssedddkkkkeeennnsseeeasseee";
 
 const countOccurrences = (string, searchingItem) => {
     let occur = 0;
     let copyString = string;
+    if(searchingItem == '') { return null;}
     while(true) {
         if(copyString.indexOf(searchingItem) === -1) { break;}
         //получаю индекс совпадения
@@ -15,7 +17,10 @@ const countOccurrences = (string, searchingItem) => {
     console.log(occur);
 };
 
-countOccurrences(myString, "ooo");
+countOccurrences(myString, "");
+console.log(typeof '');
 
+console.log(myString.indexOf(''));
+console.log(myString.indexOf('s'));
 
 
