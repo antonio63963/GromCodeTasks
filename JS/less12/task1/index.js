@@ -18,7 +18,7 @@ const calc = expression => {
             result = a / b;
             break;
     }
-    return result;
+    return `${a} ${operator} ${b} = ${result}`;
 };
 
 console.log(calc('8 / 2'));
