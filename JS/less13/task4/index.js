@@ -1,6 +1,6 @@
 let arrNum = [10, 12, 3, 5, 4];
 
-const increaseEvenEl = (arrNum, delta) => {
+export const increaseEvenEl = (arrNum, delta) => {
     
     if(Array.isArray(arrNum)) {
      return  arrNum.map(num => 
@@ -12,7 +12,7 @@ console.log(increaseEvenEl(arrNum, 10));
 
 let arrNum = [10, 12, 3, 5, 4];
 
-const cloneArr = (arrNum) => 
+export const cloneArr = (arrNum) => 
     Array.isArray(arrNum) ? [...arrNum] : null;
 
 console.log(cloneArr(arrNum));
@@ -21,7 +21,7 @@ console.log(arrNum);
 let arr = ['name', 12, true];
 let arr2 = [];
   
-const transformToObject = arr => {
+export const transformToObject = arr => {
     let obj = {};
     arr.forEach(item => 
         obj[item] = item);
@@ -37,7 +37,7 @@ const obj = {
     active: true,
 }
 
-const concatProps = obj => {
+export const concatProps = obj => {
     let arr = [];
     for(let key in obj) {
         arr.push(obj[key]);
