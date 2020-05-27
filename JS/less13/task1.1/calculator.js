@@ -1,4 +1,4 @@
-export const getSquareArray = arr =>
+export const getSquaredArray = arr =>
 arr.map(num => num**2);
 
 export const getOddNumbers = arr =>
