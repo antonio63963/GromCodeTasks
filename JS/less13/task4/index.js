@@ -10,13 +10,13 @@ export const increaseEvenEl = (arrNum, delta) => {
 console.log(increaseEvenEl(arrNum, 10));
 
 
-let arrNum = [10, 12, 3, 5, 4];
+let arrNum2 = [10, 12, 3, 5, 4];
 
-export const cloneArr = (arrNum) => 
-    Array.isArray(arrNum) ? [...arrNum] : null;
+export const cloneArr = (arrNum2) => 
+    Array.isArray(arrNum2) ? [...arrNum2] : null;
 
-console.log(cloneArr(arrNum));
-console.log(arrNum);
+console.log(cloneArr(arrNum2));
+console.log(arrNum2);
 
 let arr = ['name', 12, true];
 let arr2 = [];
@@ -35,7 +35,7 @@ const obj = {
     name: 'John',
     age: 34,
     active: true,
-}
+};
 
 export const concatProps = obj => {
     let arr = [];
