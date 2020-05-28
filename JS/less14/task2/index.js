@@ -2,7 +2,7 @@
 
 
 export default function createMessenger() {
-    let message = 'Good job';
+    let message = 'Just learn it';
     let sender = 'Gromcode';
     
     function sendMessage(name) {
