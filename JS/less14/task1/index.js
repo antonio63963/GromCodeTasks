@@ -2,9 +2,9 @@
 
 
 
-let message = 'Good morning';
+let message = 'Just learn it';
 
-export const sendMessage = name => {
+export function sendMessage(name) {
     const sender = 'Your Gromcode';
     console.log(`${name}, ${message}! ${sender}`);
 };
@@ -13,6 +13,3 @@ export const setMessage = sms => {
     message = sms;
 };
 
-sendMessage('Ann');
-setMessage('Hello');
-sendMessage('Ann');
