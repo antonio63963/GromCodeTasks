@@ -5,7 +5,8 @@
 let message = 'Good morning';
 
 export const sendMessage = name => {
-    console.log(`${name}, ${message}! Your Gromcode`);
+    const sender = 'Your Gromcode';
+    console.log(`${name}, ${message}! ${sender}`);
 };
 
 export const setMessage = sms => {
