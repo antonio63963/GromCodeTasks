@@ -4,7 +4,7 @@
 let message = 'Good morning';
 
 
- const sendMessage = name => {
+export const sendMessage = name => {
     console.log(`${name}, ${message}! Your Gromcode`);
 };
 
