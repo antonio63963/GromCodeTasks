@@ -7,7 +7,7 @@ export default function createMessenger() {
     
     function sendMessage(name) {
         console.log(`${name}, ${message}! Your ${sender}`);
-    };
+    }
 
     const setMessage = sms => {
         message = sms;
