@@ -9,11 +9,11 @@ export default function createMessenger() {
         console.log(`${name}, ${message}! Your ${sender}`);
     }
 
-    const setMessage = sms => {
+    const setMessage = (sms = 'Good job') => {
         message = sms;
     };
 
-    const setSender = (whoSend = 'Good job') => {
+    const setSender = whoSend => {
         sender = whoSend;
     };
     return {
