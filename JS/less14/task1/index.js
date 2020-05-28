@@ -8,7 +8,7 @@ export const sendMessage = name => {
     console.log(`${name}, ${message}! Your Gromcode`);
 };
 
-const setMessage = sms => {
+export const setMessage = sms => {
     message = sms;
 };
 
