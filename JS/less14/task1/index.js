@@ -1,10 +1,10 @@
 'use strict'; 
 
 
-let message = 'Good morning';
 
 
 export const sendMessage = name => {
+    let message = 'Good morning';
     console.log(`${name}, ${message}! Your Gromcode`);
 };
 
