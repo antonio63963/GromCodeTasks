@@ -1,20 +1,17 @@
+'use strict'; 
+
+
 let message = 'Good morning';
 
-function messenger() {
-    const sendMessage = name => {
-        console.log(`${name}, ${message}! Your Gromcode`);
-    };
 
-    const setMessage = sms => {
-        message = sms;
-    };
-    return {
-        sendMessage,
-        setMessage,
-    };
-}
+ const sendMessage = name => {
+    console.log(`${name}, ${message}! Your Gromcode`);
+};
 
-let a = messenger();
-a.sendMessage('Ann');
-a.setMessage('Hello');
-a.sendMessage('Ann');
+const setMessage = sms => {
+    message = sms;
+};
+
+sendMessage('Ann');
+setMessage('Hello');
+sendMessage('Ann');
