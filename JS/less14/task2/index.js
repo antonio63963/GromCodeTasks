@@ -13,7 +13,7 @@ export default function createMessenger() {
         message = sms;
     };
 
-    const setSender = whoSend => {
+    const setSender = (whoSend = 'Good job') => {
         sender = whoSend;
     };
     return {
