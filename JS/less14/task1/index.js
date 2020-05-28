@@ -1,12 +1,20 @@
-let message = 'sdfasdfasdf';
-const sendMessage = name => {
-    console.log(`${name}, ${message}! Your Gromcode`);
-};
+let message = 'Good morning';
 
-const setMessage = sms => {
-    message = sms;
-};
+function messenger() {
+    const sendMessage = name => {
+        console.log(`${name}, ${message}! Your Gromcode`);
+    };
 
-sendMessage('Ann');
-setMessage('Hello');
-sendMessage('Ann');
+    const setMessage = sms => {
+        message = sms;
+    };
+    return {
+        sendMessage,
+        setMessage,
+    };
+}
+
+let a = messenger();
+a.sendMessage('Ann');
+a.setMessage('Hello');
+a.sendMessage('Ann');
