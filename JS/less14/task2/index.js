@@ -2,14 +2,14 @@
 
 
 export default function createMessenger() {
-    let message = 'Just learn it';
+    let message = 'Good job';
     let sender = 'Gromcode';
     
     function sendMessage(name) {
         console.log(`${name}, ${message}! Your ${sender}`);
     }
 
-    const setMessage = (sms = 'Good job') => {
+    const setMessage = (sms) => {
         message = sms;
     };
 
