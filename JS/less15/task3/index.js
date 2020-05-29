@@ -1,6 +1,6 @@
 'use strict';
 
-function createLoger() {
+export function createLoger() {
 
     let memory = [];
     const warn = sms => {
