@@ -1,6 +1,6 @@
 'use strict';
 
-export function createLoger() {
+function createLoger() {
 
     let memory = [];
     const warn = sms => {
@@ -29,7 +29,7 @@ export function createLoger() {
     const getRecords = (typeSms) => {
 
         if (typeof typeSms == 'undefined') {
-            return memory.reverse()
+            return memory.reverse();
         }
         let result = memory
             .filter(item => item.type == typeSms)
@@ -47,7 +47,7 @@ export function createLoger() {
 const logger = createLoger();
 
 logger.log('im happy');
-logger.error('wtf!!!');;
+logger.error('wtf!!!');
 console.log(logger.getRecords());
 logger.warn('be cauful');
 logger.warn('be cauful');
@@ -56,3 +56,4 @@ logger.warn('be cauful');
 console.log(logger.getRecords());
 
 logger.log('some sms');
+
