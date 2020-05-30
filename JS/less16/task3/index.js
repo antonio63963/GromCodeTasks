@@ -1,6 +1,6 @@
 'use strict';
 
-function createArrayOfFunctions(len) {
+export function createArrayOfFunctions(len) {
     let arr = [];
     if (typeof len == 'number') {
         for (let i = 0; i < len; i++) {
