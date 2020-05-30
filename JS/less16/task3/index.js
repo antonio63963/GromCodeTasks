@@ -1,6 +1,8 @@
 'use strict';
 
-const createArrayOfFunctions = (len) => {
+export function createArrayOfFunctions(len) {
+    if(typeof len == NaN) { return null;}
+    else if(typeof len == 'undefined') { return [];}
     let arr = [];
 
     for(let i = 0; i < len; i++) {
@@ -13,4 +15,3 @@ const createArrayOfFunctions = (len) => {
 console.log(createArrayOfFunctions(10));
 console.log(createArrayOfFunctions(10)[5]());
 
-export default createArrayOfFunctions();
