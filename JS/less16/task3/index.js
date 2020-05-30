@@ -12,3 +12,5 @@ const createArrayOfFunctions = (len) => {
 
 console.log(createArrayOfFunctions(10));
 console.log(createArrayOfFunctions(10)[5]());
+
+export default createArrayOfFunctions();
