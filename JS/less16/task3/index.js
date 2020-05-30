@@ -1,7 +1,7 @@
 'use strict';
 
-export function createArrayOfFunctions(len) {
-    if (!Number.isNaN(len)) {
+ function createArrayOfFunctions(len) {
+    if (typeof len !== 'number') {
         return null;
     } else if (typeof len == 'undefined') {
         return [];
@@ -18,4 +18,5 @@ export function createArrayOfFunctions(len) {
 };
 
 console.log(createArrayOfFunctions('5'));
+console.log(createArrayOfFunctions(5));
 console.log(createArrayOfFunctions(10)[5]());
