@@ -44,7 +44,7 @@ export function createLogger() {
     };
 }
 
-const logger = createLoger();
+const logger = createLogger();
 
 logger.log('im happy');
 logger.error('wtf!!!');
