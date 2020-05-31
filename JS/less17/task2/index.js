@@ -8,7 +8,7 @@
         console.log(phoneNumber);
     },
     showDefferredPrompt(ms) {
-        setTimeout(this.showPrompt.bind(this), ms);
+        setTimeout(() => this.showPrompt.bind(this), ms);
     }
 };
 
