@@ -29,7 +29,7 @@ function greeting(firstName, lastName) {
 // 'Hello, Bob Marley. Welcome to the Microsoft'
 // используйте объект company
 // ... your code here
-greeting.call(company, ['Bob', 'Marley']);
+greeting.apply(company, ['Bob', 'Marley']);
 
 /* ===> 3 <=== */
 const country = {
