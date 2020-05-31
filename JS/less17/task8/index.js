@@ -1,18 +1,23 @@
- export const timer = {
+ const timer = {
     secondsPassed: 0,
     minsPassed: 0,
     startTimer() {
         setInterval(() => {
-            if (this.secondsPassed <= 60) {
+            if (this.secondsPassed < 59) {
                 this.secondsPassed += 1;
             } else {
                 this.secondsPassed = 0;
                 this.minsPassed += 1;
             }
 
-        }, 1000);
+// console.log(this.secondsPassed < 10 ?
+//     `${this.minsPassed}:0${this.secondsPassed}` :
+//     `${this.minsPassed}:${this.secondsPassed}`);
+        }, 200);
+        // setTimeout(() =>clearInterval(), 65000);
     },
     getTime() {
+        
         return this.secondsPassed < 10 ?
             `${this.minsPassed}:0${this.secondsPassed}` :
             `${this.minsPassed}:${this.secondsPassed}`;
@@ -28,9 +33,9 @@
 
 };
 
-timer.startTimer();
-console.log(timer.getTime());
-console.log(timer.getTime());
+//timer.startTimer();
+
+
 
 let secondsPassed = 0;
 let minsPassed = 0;
@@ -45,5 +50,5 @@ function startTimer() {
         console.log(`${minsPassed} : ${secondsPassed}`);
     }, 1000);
 }
-startTimer();
+// startTimer();
 
