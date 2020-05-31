@@ -1,6 +1,6 @@
 
 
- const user = {
+export const user = {
     firstName: 'Johny',
     lastName: 'Cash',
     getFullName() {
