@@ -23,8 +23,8 @@ export const timer = {
             `${this.minsPassed}:${this.secondsPassed}`;
 
     },
-    stopTimer(interval) {
-        clearInterval(interval);
+    stopTimer() {
+        clearInterval(this.startTimer);
     },
     resetTimer() {
         this.secondsPassed = 0;
