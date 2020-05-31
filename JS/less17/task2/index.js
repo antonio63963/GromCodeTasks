@@ -1,7 +1,7 @@
 'use strict';
 
 
-export const callbackPrompt = {
+ const callbackPrompt = {
     message: 'I need your phone number!',
     showPrompt() {
        const phoneNumber = prompt(`${this.message}`);
