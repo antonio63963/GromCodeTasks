@@ -1,6 +1,6 @@
 
 
-export const user = {
+ const user = {
     firstName: 'Johny',
     lastName: 'Cash',
     getFullName() {
@@ -8,7 +8,7 @@ export const user = {
     },
     setFullName(fullName) {
         const arrName = fullName.split(' ');
-        this.firsNname = arrName[0];
+        this.firstName = arrName[0];
         this.lastName = arrName[1];
     }
 
@@ -16,3 +16,7 @@ export const user = {
 
 const a = 'Johny Cash';
 console.log(a.split(' '));
+
+console.log(user);
+user.setFullName('Bob Dilan');
+console.log(user);
