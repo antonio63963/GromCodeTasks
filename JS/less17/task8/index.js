@@ -13,7 +13,7 @@ export const timer = {
 // console.log(this.secondsPassed < 10 ?
 //     `${this.minsPassed}:0${this.secondsPassed}` :
 //     `${this.minsPassed}:${this.secondsPassed}`);
-        }, 200);
+        }, 1000);
         // setTimeout(() =>clearInterval(), 65000);
     },
     getTime() {
