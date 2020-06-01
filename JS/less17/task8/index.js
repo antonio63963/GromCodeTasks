@@ -1,4 +1,4 @@
-export const timer = {
+ const timer = {
     secondsPassed: 0,
     minsPassed: 0,
     timerId: 0,
@@ -16,7 +16,7 @@ export const timer = {
             //     `${this.minsPassed}:0${this.secondsPassed}` :
             //     `${this.minsPassed}:${this.secondsPassed}`);
             }, 1000);
-            return interval;
+           
        
     },
     getTime() {
@@ -37,7 +37,7 @@ export const timer = {
 
 };
 
-//timer.startTimer();
+// timer.startTimer();
 
 
 
