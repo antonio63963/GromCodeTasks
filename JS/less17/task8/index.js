@@ -12,12 +12,12 @@ export const timer = {
             }
 
             
-            console.log(this.secondsPassed < 10 ?
-                `${this.minsPassed}:0${this.secondsPassed}` :
-                `${this.minsPassed}:${this.secondsPassed}`);
+            // console.log(this.secondsPassed < 10 ?
+            //     `${this.minsPassed}:0${this.secondsPassed}` :
+            //     `${this.minsPassed}:${this.secondsPassed}`);
             }, 1000);
             return interval;
-        // setTimeout(() =>clearInterval(), 65000);
+       
     },
     getTime() {
         
@@ -42,30 +42,5 @@ export const timer = {
 
 
 
-let secondsPassed = 0;
-let minsPassed = 0;
-// function startTimer() {
-//     setInterval(() => {
-//         if (secondsPassed < 60) {
-//             secondsPassed += 1;
-//         } else {
-//             secondsPassed = 0;
-//             minsPassed += 1;
-//         }
-//         console.log(`${minsPassed} : ${secondsPassed}`);
-//     }, 200);
-// }
 
-function startTimer(value) {
-   const interval = setInterval(() => alert('WOW!!!'), 1000);
-  if(value == 1) {clearInterval(interval); alert('stop!');}
-}
-//startTimer();
-
-function stop() {
- 
-startTimer(1);
-}
-
-setTimeout(stop,5000);
 
