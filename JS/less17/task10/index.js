@@ -1,7 +1,11 @@
-'use strict';
 
-export function bind(func, context) {
+
+ function bind(func, context) {
    
-    return function() { return func.call(context, ...arguments);};
+    return function() { func.call(context, ...arguments);};
 
 }
+
+
+
+/
