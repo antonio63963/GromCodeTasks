@@ -1,6 +1,6 @@
 
 
- function bind(func, context) {
+export function bind(func, context) {
    
     return function() { func.call(context, ...arguments);};
 
