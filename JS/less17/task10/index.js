@@ -2,6 +2,6 @@
 
 export function bind(func, context) {
    
-    return function() {func.call(context, ...arguments);};
+    return function() { return func.call(context, ...arguments);};
 
 }
