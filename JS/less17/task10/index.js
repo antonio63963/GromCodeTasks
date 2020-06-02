@@ -6,12 +6,11 @@ export function bind(func, context) {
     for(let i = 2; i < arguments.length; i++) {
        arg.push(arguments[i]);
     }
-   
     console.log(arg);
-    return function() {
-       
-         func.apply(context, arg);
-    };
+   function newFunc(func, context, arg) {
+        func.apply(context, arg);
+    }
+    return newFunc(func, context, arg);
 }
 const obj = {
     name: 'Denny',
@@ -25,7 +24,7 @@ const obj2 = {
 };
 
 
-const a = bind(obj.gritting, {name: 'Frank'}, 'split', 'JS');
-a();
-a.call(obj2);
-a.bind({name: 'Misha'}, 'saddad', 'rrwerwer');
+ bind(obj.gritting, {name: 'Frank'}, 'split', 'JS');
+
+// a.call(obj2);
+// a.bind({name: 'Misha'}, 'saddad', 'rrwerwer');
