@@ -13,7 +13,7 @@
 //   };
 
 
- function bind(func, context) {
+export function bind(func, context) {
      
     let arg = [];
     for(let i = 2; i < arguments.length; i++) {
