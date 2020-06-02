@@ -22,3 +22,4 @@ const obj = {
 
 const a = bind(obj.gritting, {name: 'Frank'}, 'split', 'JS');
 a();
+a('fg', 'c==');
