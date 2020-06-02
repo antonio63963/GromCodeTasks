@@ -1,7 +1,7 @@
 
 
 export function bind(func, context) {
-    return function(...arguments) {return func.call(context, ...arguments);};
+    return function() {return func.call(context, ...arguments);};
 }
 // const obj = {
 //     name: 'Denny',
