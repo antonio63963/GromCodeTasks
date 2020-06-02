@@ -10,7 +10,7 @@ export function bind(func, context) {
     console.log(arg);
     return function() {
        
-        return func.apply(context, arg);
+         func.apply(context, arg);
     };
 }
 const obj = {
@@ -19,7 +19,13 @@ const obj = {
         console.log(`Hi, I'm ${this.name} i ${make} my brain by ${len}`);
     }
 };
+const obj2 = {
+    name: 'SHmeny',
+    
+};
+
 
 const a = bind(obj.gritting, {name: 'Frank'}, 'split', 'JS');
 a();
-a('fg', 'c==');
+a.call(obj2);
+a.bind({name: 'Misha'}, 'saddad', 'rrwerwer');
