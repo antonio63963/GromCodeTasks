@@ -1,6 +1,6 @@
 
 
- function bind(func, context) {
+export function bind(func, context) {
      
      const arg = arguments;
     return function() {return func.apply(context, arg);};
