@@ -1,7 +1,9 @@
 
 
-export function bind(func, context) {
-    return function(...arguments) {return func.call(context);};
+ function bind(func, context) {
+     
+     const arg = arguments;
+    return function() {return func.apply(context, arg);};
 }
 // const obj = {
 //     name: 'Denny',
