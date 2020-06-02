@@ -1,12 +1,13 @@
 
-export function bind(func, context) {
+ function bind(func, context) {
     // обрезаем ненужные аргументы (функцию и контекст)
    let bindArgs = [].slice.call(arguments, 2);
+//    console.log(bindArgs);
     return function() {
       // здесь все аргументы будут необходимы
       let fnArgs = [].slice.call(arguments);
       // собираем все 
-      return func.apply(context, bindArgs.concat(fnArgs));
+      return func.apply(context, bindArgs);
     };
   };
 //  function bind(func, context) {
