@@ -1,5 +1,5 @@
 
- function bind(func, context) {
+export function bind(func, context) {
     // обрезаем ненужные аргументы (функцию и контекст)
    let bindArgs = [].slice.call(arguments, 2);
 //    console.log(bindArgs);
