@@ -1,24 +1,6 @@
 
-// export function bind(func, context) {
-//     // обрезаем ненужные аргументы (функцию и контекст)
-//    let bindArgs = [].slice.call(arguments, 2);
- 
-//     return function() {
-//       // здесь все аргументы будут необходимы
-//       let fnArgs = [].slice.call(arguments);
-   
-//       // собираем все 
-//       return func.apply(context, bindArgs.concat(fnArgs));
-//     };
-//   };
-
-
  function bind(func, context) {
-     
-    // let arg = [];
-    // for(let i = 2; i < arguments.length; i++) {
-    //    arg.push(arguments[i]);
-    // }
+   
    const[fn, cont, ...args] = arguments;
     // console.log(arg);
     return function() {
