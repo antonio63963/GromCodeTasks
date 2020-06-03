@@ -1,7 +1,7 @@
 'use strict';
 
 
- function saveCalls(fn) {
+export function saveCalls(fn) {
 
     let calls = [];
     function withMemory() {
