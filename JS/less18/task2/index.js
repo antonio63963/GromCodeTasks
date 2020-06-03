@@ -2,12 +2,12 @@
 
 
 export const wallet = {
-    transaction: [123, 456, 3, 54, 66],
+    transactions: [123, 456, 3, 54, 66],
     getMax() {
-        return Math.max(...this.transaction);
+        return Math.max(...this.transactions);
     },
     getMin() {
-        return Math.min(...this.transaction);
+        return Math.min(...this.transactions);
     },
 };
 
