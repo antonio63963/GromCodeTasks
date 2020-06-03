@@ -1,6 +1,6 @@
 'use strict';
 
-function sumOfSquares() {
+export function sumOfSquares() {
     
     return [...arguments].reduce((acc, elem) => {
         return acc + elem**2;
