@@ -13,7 +13,7 @@
 //   };
 
 
-function bind() {
+export function bind() {
      
     // let arg = [];
     // for(let i = 2; i < arguments.length; i++) {
