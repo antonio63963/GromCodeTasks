@@ -1,7 +1,7 @@
 'use strict';
 
 
-const wallet = {
+export const wallet = {
     transaction: [123, 456, 3, 54, 66],
     getMax() {
         return Math.max(...this.transaction);
