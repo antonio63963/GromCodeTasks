@@ -1,6 +1,6 @@
 'use strict';
 
-const event = {
+export const event = {
     message: 'welcome to the party!',
     guests: [
         {
