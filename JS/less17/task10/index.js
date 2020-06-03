@@ -19,12 +19,12 @@ export function bind(func, context) {
     // for(let i = 2; i < arguments.length; i++) {
     //    arg.push(arguments[i]);
     // }
-   
+   const[fn, cont, ...args] = arguments;
     // console.log(arg);
     return function() {
-        const [...args] = arguments;
+        const [...argsFn] = arguments;
        
-        return func.apply(context, args);
+        return func.apply(context, args.concat(argsFn));
     };
 }
 const obj = {
@@ -46,3 +46,5 @@ a.call(obj2, 5, 15);
 a.bind({name: 'Misha'}, 'saddad', 'dfsfsf');
 const b = bind(obj.sum, {name: 'Misha'});
 b(3, 9);
+
+
