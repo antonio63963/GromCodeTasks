@@ -1,14 +1,15 @@
 'use strict';
 
-export function saveCalls(fn) {
-   let calls = [];
-   return function withMemory() {
-       calls.push([...arguments]);
 
-       console.log(calls);
-     return  fn.call(null, arguments);
-   };
-    
+function saveCalls(fn) {
+
+    let calls = [];
+    function withMemory() {
+        calls.push([...arguments]);
+        return fn.call(null, arguments);
+    }
+    withMemory.calls = calls;
+    return withMemory;
 }
 
 function test(a, b) {
