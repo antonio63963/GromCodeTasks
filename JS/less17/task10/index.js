@@ -13,7 +13,7 @@
 //   };
 
 
-export function bind(func, context) {
+ function bind(func, context) {
      
     // let arg = [];
     // for(let i = 2; i < arguments.length; i++) {
@@ -44,7 +44,7 @@ const a = bind(obj.sum, {name: 'Frank'});
 a(2, 8);
 a.call(obj2, 5, 15);
 a.bind({name: 'Misha'}, 'saddad', 'dfsfsf');
-const b = bind(obj.sum, {name: 'Misha'});
-b(3, 9);
+const b = bind(obj.sum, {name: 'Misha'}, 3, 9);
+b();
 
 
