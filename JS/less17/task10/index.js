@@ -1,5 +1,5 @@
 
- function bind(func, context) {
+export function bind(func, context) {
    
    const[fn, cont, ...args] = arguments;
     
