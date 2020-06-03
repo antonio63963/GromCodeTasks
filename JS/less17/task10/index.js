@@ -13,17 +13,18 @@
 //   };
 
 
-export function bind(func, context) {
+function bind() {
      
-    let arg = [];
-    for(let i = 2; i < arguments.length; i++) {
-       arg.push(arguments[i]);
-    }
+    // let arg = [];
+    // for(let i = 2; i < arguments.length; i++) {
+    //    arg.push(arguments[i]);
+    // }
    
-    console.log(arg);
+    // console.log(arg);
+    const [fn, cont, ...args] = arguments;
     return function() {
        
-        return func.apply(context, arg);
+        return fn.apply(cont, args);
     };
 }
 const obj = {
@@ -40,7 +41,7 @@ const obj2 = {
 
 
 const a = bind(obj.sum, {name: 'Frank'}, 2, 8);
-a();
+a(2, 8);
 a.call(obj2);
 a.bind({name: 'Misha'}, 'saddad', 'dfsfsf');
 const b = obj.sum.bind({name: 'Misha'}, 3, 9);
