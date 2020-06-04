@@ -11,6 +11,7 @@ export const vehicle = {
 };
 
 export const ship = {
+    name: "Argo",
     startMachine() {
         console.log(`${this.name} lifting anchor up`);
     },
