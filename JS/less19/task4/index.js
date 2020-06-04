@@ -1,6 +1,6 @@
 'use strict';
 
-export default user = {
+export default {
     firstName: 'Mik',
     lastName: 'Jagger',
     get fullName() {
