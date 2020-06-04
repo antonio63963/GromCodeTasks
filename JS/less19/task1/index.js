@@ -1,6 +1,7 @@
 'use strict';
 
 export const vehicle = {
+    name: "Argo",
     move() {
         console.log(`${this.name} is moving`);
     },
@@ -10,7 +11,6 @@ export const vehicle = {
 };
 
 export const ship = {
-    name: "Argo",
     startMachine() {
         console.log(`${this.name} lifting anchor up`);
     },
@@ -25,6 +25,7 @@ ship.startMachine();
 ship.move();
 ship.stop();
 ship.stopMachine();
+
 
 
 
