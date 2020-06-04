@@ -1,8 +1,8 @@
 'use strict';
 
 export default {
-    firstName: 'Mik',
-    lastName: 'Jagger',
+    firstName,
+    lastName,
     get fullName() {
         return `${this.firstName} ${this.lastName}`;
     },
