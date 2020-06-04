@@ -1,12 +1,12 @@
 'use strict';
 
 export default {
-    firstName: 'Mik',
-    lastName: 'Jagger',
-    getfullName() {
+    firstName: 'John',
+    lastName: 'Doe',
+    get fullName() {
         return `${this.firstName} ${this.lastName}`;
     },
-    setfullName(value) {
+    set fullName(value) {
         const arr = value.split(' ');
         this.firstName = arr[0];
         this.lastName = arr[1];
