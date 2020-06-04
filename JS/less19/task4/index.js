@@ -1,6 +1,6 @@
 'use strict';
 
-const user = {
+export default user = {
     firstName: 'Mik',
     lastName: 'Jagger',
     get fullName() {
