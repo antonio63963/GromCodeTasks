@@ -4,13 +4,13 @@ export function User(name, age) {
     this.name = name;
     this.age = age;
 }
-User.prototype.sayHi() {
+User.prototype.sayHi = function() {
     console.log(`Hi, I'am ${this.name}`);
 }
-User.prototype.requestNewPhoto() {
+User.prototype.requestNewPhoto = function() {
     console.log(`New photo request was sent for ${this.name}`);
 }
-User.prototype.setAge(value) {
+User.prototype.setAge = function(value) {
     if (value < 0) {
         return false;
     } else {
@@ -21,4 +21,4 @@ User.prototype.setAge(value) {
         return this.age;
     }
 
-}
+};
