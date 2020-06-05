@@ -1,6 +1,6 @@
 
 
-export const user = {
+export default {
     firstName: 'John',
     lastName: 'Doe',
     get fullName() {
@@ -13,7 +13,3 @@ export const user = {
     },
 };
 
-console.log(user.fullName);
-user.fullName ='James Bond';
-console.log(user.fullName);
-console.log(user);
