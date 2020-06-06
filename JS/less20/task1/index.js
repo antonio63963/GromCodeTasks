@@ -19,7 +19,10 @@ export class User {
             return false;
         } else {
             this.age = value;
-            this.requestNewPhoto();
+            if(value >= 25) {
+                this.requestNewPhoto();
+            }
+            
             return value;
         }
     } 
