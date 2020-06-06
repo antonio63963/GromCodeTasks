@@ -1,6 +1,6 @@
 'use strict';
 
-export class Wallet {
+ class Wallet {
     constructor() {
         this._balance = 0;
     }
@@ -13,7 +13,7 @@ export class Wallet {
         this._balance += value;
     }
 
-    withDraw(value) {
+    withdraw(value) {
         if (value > this._balance) {
             console.log('No enough funds');
             return;
@@ -27,3 +27,4 @@ export class Wallet {
 const wallet1 = new Wallet();
 
 wallet1.getBalance();
+wallet1.withdraw(34);
