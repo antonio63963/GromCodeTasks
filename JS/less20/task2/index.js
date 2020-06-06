@@ -1,6 +1,6 @@
 'use strict';
 
-class Vehicle {
+export class Vehicle {
     constructor(name, numberOfWeels) {
         this.name = name;
         this.numberOfWeels = numberOfWeels;
@@ -14,7 +14,7 @@ class Vehicle {
     }
 }
 
-class Ship extends Vehicle {
+export class Ship extends Vehicle {
     constructor(name, numberOfWeels, maxSpeed) {
         super(name, numberOfWeels);
         this.maxSpeed = maxSpeed;
@@ -30,3 +30,8 @@ class Ship extends Vehicle {
         console.log(`${this.name} lifting anchor down`);
     }
 }
+
+const ship1 = new Ship('Tovarich', false, 40);
+
+ship1.move();
+ship1.stop();
