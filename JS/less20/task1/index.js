@@ -7,7 +7,7 @@ export class User {
     }
 
     sayHi() {
-        console.log(`Hi, I am ${this.name} `);
+        console.log(`Hi, I am ${this.name}`);
     }
 
     requestNewPhoto() {
@@ -18,13 +18,16 @@ export class User {
         if(value < 0) {
             return false;
         } else {
-            return this.age;
+            this.age = value;
+            this.requestNewPhoto();
+            return value;
         }
     } 
 
     static createEmpty() {
         this.name = '';
         this.age = null;
+        return this.User;
     }
 }
 
