@@ -28,9 +28,9 @@ export class User {
     } 
 
     static createEmpty() {
-        this.name = '';
+       return this.name = '',
         this.age = null;
-        return `${this.name} ${this.age}`;
+    
     }
 }
 
