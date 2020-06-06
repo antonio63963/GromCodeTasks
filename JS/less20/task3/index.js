@@ -1,6 +1,6 @@
 'use strict';
 
- class Wallet {
+export class Wallet {
     constructor() {
         this._balance = 0;
     }
