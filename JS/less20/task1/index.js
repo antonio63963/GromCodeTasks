@@ -30,7 +30,7 @@ export class User {
     static createEmpty() {
         this.name = '';
         this.age = null;
-        return this.User;
+        return `${this.name} ${this.age}`;
     }
 }
 
