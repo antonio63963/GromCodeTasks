@@ -4,15 +4,15 @@ export class Wallet {
     constructor() {
         _balance = 0;
     }
-    _getBalance() {
+    getBalance() {
         return this._balance;
     }
 
-    _deposit(value) {
+    deposit(value) {
         this._balance += value;
     }
 
-    _withDraw(value) {
+    withDraw(value) {
         if (value > this._balance) {
             console.log('No enough funds');
             return;
