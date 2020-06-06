@@ -1,7 +1,7 @@
 'use strict';
 
 export class User {
-    constructor (name, age) {
+    constructor(name, age) {
         this.name = name;
         this.age = age;
     }
@@ -15,28 +15,25 @@ export class User {
     }
 
     setAge(value) {
-        if(value < 0) {
+        if (value < 0) {
             return false;
         } else {
             this.age = value;
-            if(value >= 25) {
+            if (value >= 25) {
                 this.requestNewPhoto();
             }
-            
+
             return value;
         }
-    } 
+    }
 
     static createEmpty() {
-       return this.name = '',
-        this.age = null;
-    
+        const user = {
+
+            name: '',
+            age: null,
+
+        };
+        return user;
     }
 }
-
-
-
-
-
-
-
