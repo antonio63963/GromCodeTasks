@@ -2,9 +2,9 @@
 
 export class Order {
     constructor(price, city, type) {
-        this.id = Math.floor(Math.random(100) * 100);
+        this.id = Math.floor(Math.random(100) * 10);
         this.price = price;
-        this.dataCreated = new Date();
+        this.dataCreated = new Date().getTime();
         this.isConfirmed = false;
         this.dateConfirmed;
         this.city = city;
@@ -22,8 +22,8 @@ export class Order {
         }
     }
 
-    isValidType(type) {
-        return type == 'Buy' || type == 'Sell' ? 
+    isValidType() {
+        return this.type == 'Buy' ? 
         true :
         false;
 
