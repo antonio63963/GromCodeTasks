@@ -2,9 +2,10 @@
 
 export class Wallet {
     constructor() {
-        _balance = 0;
+        this._balance = 0;
     }
     getBalance() {
+        console.log(this._balance);
         return this._balance;
     }
 
@@ -22,3 +23,7 @@ export class Wallet {
     }
 
 }
+
+const wallet1 = new Wallet();
+
+wallet1.getBalance();
