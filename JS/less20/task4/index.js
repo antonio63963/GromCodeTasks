@@ -4,7 +4,7 @@ export class Order {
     constructor(price, city, type) {
         this.id = Math.floor(Math.random(100) * 10);
         this.price = price;
-        this.dataCreated = new Date().getTime();
+        this.dateCreated = new Date().getTime();
         this.isConfirmed = false;
         this.dateConfirmed;
         this.city = city;
@@ -23,7 +23,7 @@ export class Order {
     }
 
     isValidType() {
-        return this.type == 'Buy' ? 
+        return this.type == 'Buy' || this.type == 'Sell' ? 
         true :
         false;
 
