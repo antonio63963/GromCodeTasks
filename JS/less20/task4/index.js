@@ -2,9 +2,9 @@
 
 export class Order {
     constructor(price, city, type) {
-        this.id = Math.floor(Math.random(100) * 10);
+        this.id = Math.floor(Math.random(100) * 10 + 1);
         this.price = price;
-        this.dateCreated = new Date().getTime();
+        this.dateCreated = new Date();
         this.isConfirmed = false;
         this.dateConfirmed;
         this.city = city;
@@ -29,3 +29,6 @@ export class Order {
 
     }
 }
+
+// const id = Math.floor(Math.random(100) * 10 + 1);
+// console.log(id);
