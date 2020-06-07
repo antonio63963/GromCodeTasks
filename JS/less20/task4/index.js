@@ -1,6 +1,6 @@
 'use strict';
 
- class Order {
+export class Order {
     constructor(price, city, type) {
         this.id = Math.floor(Math.random() * 1000 +1) ;
         this.price = price;
