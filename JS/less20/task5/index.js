@@ -15,30 +15,30 @@ export class User {
         return this._name;
     }
     get sessionId() {
-        return this.sessionId;
+        return this._sessionId;
     }
 }
 
 export class UserRepository {
     constructor(users) {
-        this.users = Object.freeze(users);
+        this._users = Object.freeze(users);
     }
     get users() {
-        return this.users;
+        return this._users;
     }
     getUserName() {
-        return this.users.map(({
+        return this._users.map(({
             name
         }) => name);
     }
     getUserIds() {
-        return this.users.map(({
+        return this._users.map(({
             id
         }) => id);
     }
     getUserById(idValue) {
         let userName;
-        this.users.forEach(({
+        this._users.forEach(({
             id,
             name
         }) => {
