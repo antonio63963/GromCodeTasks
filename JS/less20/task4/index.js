@@ -2,7 +2,7 @@
 
 export class Order {
     constructor(price, city, type) {
-        this.id = Math.floor(Math.random() * 1000 +1) ;
+        this.id = toString(Math.floor(Math.random() * 1000 +1));
         this.price = price;
         this.dateCreated = new Date();
         this.isConfirmed = false;
