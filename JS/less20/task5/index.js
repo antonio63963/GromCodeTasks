@@ -26,7 +26,7 @@ export class UserRepository {
     get users() {
         return this._users;
     }
-    getUserName() {
+    getUserNames() {
         return this._users.map(({
             name
         }) => name);
@@ -36,7 +36,7 @@ export class UserRepository {
             id
         }) => id);
     }
-    getUserById(idValue) {
+    getUserNameById(idValue) {
         let userName;
         this._users.forEach(({
             id,
