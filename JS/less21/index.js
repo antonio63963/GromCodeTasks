@@ -47,4 +47,3 @@ const addTaskEllements = (arr) => {
 
 const tasksArr = addTaskEllements(tasks);
 tasksList.append(...tasksArr);
-const htmlTasks = [...tasksList.innerHTML].sort((a, b) => a.checked - b.checked);
