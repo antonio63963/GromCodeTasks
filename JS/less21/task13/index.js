@@ -1,5 +1,5 @@
 
-function getSection(num) {
+export function getSection(num) {
     const collection = document.querySelectorAll('span');
     let parent;
     for(let i = 0; i < collection.length; i++) {
