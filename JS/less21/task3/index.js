@@ -1,12 +1,12 @@
 
 
- function getItemsList() {
+export function getItemsList() {
     const collection = document.querySelectorAll('.technology');
     console.dir(collection);
     return collection;
 }
 
- function getItemsArray() {
+export function getItemsArray() {
     const collection = Array.from(document.querySelectorAll('.tool'));
     
     
