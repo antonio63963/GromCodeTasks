@@ -1,12 +1,12 @@
 
 
-function getTitleElement() {
+export function getTitleElement() {
     const titleElem = document.querySelector('.title');
     console.dir(titleElem);
     return titleElem;
 }
 
-const getInputElement = () => {
+export function getInputElement() {
     const collection =  [...document.querySelectorAll('input')];
     const result = collection.filter(item => item.type == 'text');
     // const res = result[0];
