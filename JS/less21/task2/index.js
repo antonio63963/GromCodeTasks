@@ -9,7 +9,9 @@ function getTitleElement() {
 const getInputElement = () => {
     const collection =  [...document.querySelectorAll('input')];
     const result = collection.filter(item => item.type == 'text');
-    console.log(...result);
+    // const res = result[0];
+    console.dir(result);
+    return result;
 };
 
 getTitleElement();
