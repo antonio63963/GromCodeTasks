@@ -20,8 +20,8 @@ const tasks = [{
     },
 ];
 
-const tasksList = document.querySelector('.list');
 const addTaskEllements = (arr) => {
+    const tasksList = document.querySelector('.list');
     const tasksArr = arr.sort((a, b) => a.done - b.done)
         .map(({
             text,
@@ -41,9 +41,9 @@ const addTaskEllements = (arr) => {
             return taskItem;
         });
 
-    return tasksArr;
+    tasksList.append(...tasksArr);
 };
 
 
 const tasksArr = addTaskEllements(tasks);
-tasksList.append(...tasksArr);
+
