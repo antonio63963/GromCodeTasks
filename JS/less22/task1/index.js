@@ -18,26 +18,26 @@ const clearList = () => {
 
 const divHandler = () => {
     // event.stopPropagation();
-    inputColorText('grey', 'DIV');
+    inputColorText('green', 'DIV');
 };
 const divHandler2 = () => {
-     inputColorText('green', 'DIV');
+     inputColorText('grey', 'DIV');
 };
 
 const pHandler = () => {
     // event.stopPropagation();
-    inputColorText('grey', 'P');
+    inputColorText('green', 'P');
 };
 const pHandler2 = () => {
-       inputColorText('green', 'P');
+       inputColorText('grey', 'P');
 };
 
 const spanHandler = () => {
     // event.stopPropagation();
-    inputColorText('grey', 'SPAN');
+    inputColorText('green', 'SPAN');
 };
 const spanHandler2 = () => {
-    inputColorText('green', 'SPAN');
+    inputColorText('grey', 'SPAN');
 };
 
 const removeHandler = () => {
