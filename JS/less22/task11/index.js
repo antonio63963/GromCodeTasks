@@ -52,6 +52,7 @@ const addTaskEllements = (arr) => {
 // handlers
 
 const handleCreateTask = () => {
+    if(taskInput.value == '') { return; }
     tasks.push({
         text: taskInput.value,
         done: false,
