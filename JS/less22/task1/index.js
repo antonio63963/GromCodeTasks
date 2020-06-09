@@ -41,12 +41,12 @@ const spanHandler2 = () => {
 };
 
 const removeHandler = () => {
-    divElem.removeEventListener('click', divHandler);
     divElem.removeEventListener('click', divHandler2, true);
-    pElem.removeEventListener('click', pHandler);
+    divElem.removeEventListener('click', divHandler);
     pElem.removeEventListener('click', pHandler2, true);
-    spanElem.removeEventListener('click', spanHandler);
+    pElem.removeEventListener('click', pHandler);
     spanElem.removeEventListener('click', spanHandler2, true);
+    spanElem.removeEventListener('click', spanHandler);
 };
 
 const attachHandlers = () => {
@@ -63,9 +63,9 @@ clearBtn.addEventListener('click', () => clearList());
 removeHandlerBtn.addEventListener('click', () => removeHandler());
 attachHandlersBtn.addEventListener('click', () => attachHandlers());
 
-divElem.addEventListener('click', divHandler);
 divElem.addEventListener('click', divHandler2, true);
-pElem.addEventListener('click', pHandler);
+divElem.addEventListener('click', divHandler);
 pElem.addEventListener('click', pHandler2, true);
-spanElem.addEventListener('click', spanHandler);
+pElem.addEventListener('click', pHandler);
 spanElem.addEventListener('click', spanHandler2, true);
+spanElem.addEventListener('click', spanHandler);
