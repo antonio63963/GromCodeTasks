@@ -32,7 +32,7 @@ const taskInput = document.querySelector('.task-input');
 // dwnld existing arr
 
 const addTaskEllements = (arr) => {
-    const tasksArr = arr.sort((a, b) => a.done - b.done)
+    const tasksArr = arr.sort((a, b) => b.id - a.id).sort((a, b) => a.done - b.done)
     .map(({ text, done, id }) => {
         return done ? 
         `<li class="list__item list__item_done" data-id="${id}">
