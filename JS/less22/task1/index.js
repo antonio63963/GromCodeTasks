@@ -42,11 +42,11 @@ const spanHandler2 = () => {
 
 const removeHandler = () => {
     divElem.removeEventListener('click', divHandler);
-    divElem.removeEventListener('click', divHandler2);
+    divElem.removeEventListener('click', divHandler2, true);
     pElem.removeEventListener('click', pHandler);
-    pElem.removeEventListener('click', pHandler2);
+    pElem.removeEventListener('click', pHandler2, true);
     spanElem.removeEventListener('click', spanHandler);
-    spanElem.removeEventListener('click', spanHandler2);
+    spanElem.removeEventListener('click', spanHandler2, true);
 };
 
 const attachHandlers = () => {
