@@ -72,14 +72,40 @@ const handleCreateTask = () => {
     taskInput.value = '';
 };
 
+// const handlerCheckbox = (e) => {
+//     if (!e.target.classList.contains('list__item-checkbox')) {
+//         return;
+//     }
+ 
+//     const id = e.target.closest('.list__item')
+//         .getAttribute('data-id');
+//     if (!e.target.hasAttribute('checked')) {
+//         tasks.forEach((elem) => {
+//             if (elem.id == id) {
+//                 elem.done = true;
+//             }
+//         });
+//     } else {
+//         e.target.removeAttribute('checked');
+//         tasks.forEach((elem) => {
+//             if (elem.id == id) {
+//                 elem.done = false;
+//             }
+//         });
+//     }
+// //    console.log(e.target.closest('.list__item'));
+//     // console.log(document.querySelectorAll('.list__item'));
+//     addTaskEllements(tasks);
+    
+// };
+
 const handlerCheckbox = (e) => {
-    if (!e.target.classList.contains('list__item-checkbox')) {
+    if (!e.target.classList.contains('list__item')) {
         return;
     }
  
-    const id = e.target.closest('.list__item')
-        .getAttribute('data-id');
-    if (!e.target.hasAttribute('checked')) {
+    const id = e.target.getAttribute('data-id');
+    if (!e.target.firstChild.hasAttribute('checked')) {
         tasks.forEach((elem) => {
             if (elem.id == id) {
                 elem.done = true;
@@ -100,5 +126,5 @@ const handlerCheckbox = (e) => {
 };
 
 addTaskEllements(tasks);
-tasksList.addEventListener('change', handlerCheckbox);
+tasksList.addEventListener('click', handlerCheckbox);
 createTaskBtn.addEventListener('click', handleCreateTask);
