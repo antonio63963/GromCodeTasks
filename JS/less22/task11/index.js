@@ -56,6 +56,10 @@ const addTaskEllements = (arr) => {
         });
 
     tasksList.append(...tasksArr);
+    const collection = document.querySelectorAll('.list__item');
+    for(let i = 0; i< collection.length; i++) {
+        collection[i].addEventListener('click', handlerListItem);
+    }
 };
 // handlers
 
@@ -99,10 +103,8 @@ const handleCreateTask = () => {
     
 // };
 
-const handlerCheckbox = (e) => {
-    if (!e.target.classList.contains('list__item')) {
-        return;
-    }
+const handlerListItem = (e) => {
+    
  
     const id = e.target.getAttribute('data-id');
     if (!e.target.firstChild.hasAttribute('checked')) {
@@ -112,7 +114,7 @@ const handlerCheckbox = (e) => {
             }
         });
     } else {
-        e.target.removeAttribute('checked');
+        // e.target.firstChild.removeAttribute('checked');
         tasks.forEach((elem) => {
             if (elem.id == id) {
                 elem.done = false;
@@ -126,5 +128,5 @@ const handlerCheckbox = (e) => {
 };
 
 addTaskEllements(tasks);
-tasksList.addEventListener('click', handlerCheckbox);
+// tasksList.addEventListener('click', handlerCheckbox);
 createTaskBtn.addEventListener('click', handleCreateTask);
