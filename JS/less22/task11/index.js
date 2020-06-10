@@ -66,7 +66,7 @@ const handleCreateTask = () => {
     tasks.push({
         text: taskInput.value,
         done: false,
-        id: tasks.length
+        id: tasks.length + 1
     });
     addTaskEllements(tasks);
     taskInput.value = '';
@@ -93,7 +93,7 @@ const handlerCheckbox = (e) => {
             }
         });
     }
-   
+//    console.log(e.target.closest('.list__item'));
     // console.log(document.querySelectorAll('.list__item'));
     addTaskEllements(tasks);
     
