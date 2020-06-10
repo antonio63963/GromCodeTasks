@@ -48,7 +48,30 @@ const addTaskEllements = (arr) => {
     
     tasksList.innerHTML = tasksArr.join('');
 };
+// const addTaskEllements = (arr) => {
+//     const tasksList = document.querySelector('.list');
+//     tasksList.textContent = '';
+//     const tasksArr = arr.sort((a, b) => a.done - b.done)
+//         .map(({
+//             text,
+//             done
+//         }) => {
+//             let taskItem = document.createElement('li');
+//             taskItem.classList.add('list__item');
+//             let checkbox = document.createElement('input');
+//             checkbox.classList.add('list__item-checkbox');
+//             checkbox.setAttribute('type', 'checkbox');
+//             if (done) {
+//                 checkbox.setAttribute('checked', done);
+//                 taskItem.classList.add('list__item_done');
+//             }
+//             taskItem.append(checkbox);
+//             taskItem.append(text);
+//             return taskItem;
+//         });
 
+//     tasksList.append(...tasksArr);
+// };
 // handlers
 
 const handleCreateTask = () => {
@@ -60,7 +83,7 @@ const handleCreateTask = () => {
     });
     addTaskEllements(tasks);
     taskInput.value = '';
-}
+};
 
 const handlerCheckbox = (e) => {
     if(!e.target.classList.contains('list__item-checkbox')) {return;}
@@ -70,7 +93,7 @@ const handlerCheckbox = (e) => {
         if(elem.id == id) {elem.done = true;}
     });
         addTaskEllements(tasks);
-        console.log(collection);
+        // console.log(tasks);
 };
 
 addTaskEllements(tasks);
