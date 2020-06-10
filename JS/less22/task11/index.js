@@ -43,9 +43,9 @@ const taskInput = document.querySelector('.task-input');
 //         <input type="checkbox" class="list__item-checkbox">
 //         ${text}
 //         </li>`;
-        
+
 //     });
-    
+
 //     tasksList.innerHTML = tasksArr.join('');
 // };
 const addTaskEllements = (arr) => {
@@ -77,25 +77,43 @@ const addTaskEllements = (arr) => {
 // handlers
 
 const handleCreateTask = () => {
-    if(taskInput.value == '') { return; }
+    if (taskInput.value == '') {
+        return;
+    }
     tasks.push({
         text: taskInput.value,
         done: false,
-        id: tasks.length 
+        id: tasks.length
     });
     addTaskEllements(tasks);
     taskInput.value = '';
 };
 
 const handlerCheckbox = (e) => {
-    if(!e.target.classList.contains('list__item-checkbox')) {return;}
+    if (!e.target.classList.contains('list__item-checkbox')) {
+        return;
+    }
+ 
     const id = e.target.closest('.list__item')
         .getAttribute('data-id');
-    tasks.forEach((elem) => {
-        if(elem.id == id) {elem.done = true;}
-    });
-        addTaskEllements(tasks);
-        console.log(tasks);
+    if (!e.target.hasAttribute('checked')) {
+        tasks.forEach((elem) => {
+            if (elem.id == id) {
+                elem.done = true;
+            }
+        });
+    } else {
+        e.target.removeAttribute('checked');
+        tasks.forEach((elem) => {
+            if (elem.id == id) {
+                elem.done = false;
+            }
+        });
+    }
+   
+    // console.log(document.querySelectorAll('.list__item'));
+    addTaskEllements(tasks);
+    
 };
 
 addTaskEllements(tasks);
