@@ -56,8 +56,9 @@ const addTaskEllements = (arr) => {
         });
 
     tasksList.append(...tasksArr);
+
     const collection = document.querySelectorAll('.list__item');
-    for(let i = 0; i< collection.length; i++) {
+    for(let i = 0; i < collection.length; i++) {
         collection[i].addEventListener('click', handlerListItem);
     }
 };
