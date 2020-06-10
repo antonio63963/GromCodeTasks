@@ -31,23 +31,6 @@ const taskInput = document.querySelector('.task-input');
 
 // dwnld existing arr
 
-// const addTaskEllements = (arr) => {
-//     const tasksArr = arr.sort((a, b) => b.id - a.id).sort((a, b) => a.done - b.done)
-//     .map(({ text, done, id }) => {
-//         return done ? 
-//         `<li class="list__item list__item_done" data-id="${id}">
-//         <input type="checkbox" checked class="list__item-checkbox">
-//         ${text}
-//         </li>` :
-//         `<li class="list__item" data-id="${id}">
-//         <input type="checkbox" class="list__item-checkbox">
-//         ${text}
-//         </li>`;
-
-//     });
-
-//     tasksList.innerHTML = tasksArr.join('');
-// };
 const addTaskEllements = (arr) => {
     const tasksList = document.querySelector('.list');
     tasksList.textContent = '';
