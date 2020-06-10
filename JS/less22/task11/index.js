@@ -15,12 +15,12 @@ const tasks = [{
     },
     {
         text: 'Visit doctor',
-        done: true,
+        done: false,
         id: 4,
     },
     {
         text: 'Buy meat',
-        done: true,
+        done: false,
         id: 5,
     },
 ];
