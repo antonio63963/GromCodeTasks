@@ -34,7 +34,7 @@ const taskInput = document.querySelector('.task-input');
 const renderTaskEllements = (arr) => {
     const tasksList = document.querySelector('.list');
     tasksList.textContent = '';
-    const tasksArr = arr.sort((a, b) => a.done - b.done)
+    const tasksArr = arr.sort((a, b) => b.id - a.id).sort((a, b) => a.done - b.done)
         .map(({
             text,
             done,
