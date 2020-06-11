@@ -57,9 +57,9 @@ const renderTaskEllements = (arr) => {
 
     tasksList.append(...tasksArr);
 
-    const collection = document.querySelectorAll('.list__item-checkbox');
+    const collection = document.querySelectorAll('.list__item');
     for (let i = 0; i < collection.length; i++) {
-        collection[i].addEventListener('change', handleCheck);
+        collection[i].addEventListener('click', handleUpdateTask);
     }
 };
 // handlers
@@ -77,92 +77,21 @@ const handleCreateTask = () => {
     taskInput.value = '';
 };
 
-// const handlerCheckbox = (e) => {
-//     if (!e.target.classList.contains('list__item-checkbox')) {
-//         return;
-//     }
-
-//     const id = e.target.closest('.list__item')
-//         .getAttribute('data-id');
-//     if (!e.target.hasAttribute('checked')) {
-//         tasks.forEach((elem) => {
-//             if (elem.id == id) {
-//                 elem.done = true;
-//             }
-//         });
-//     } else {
-//         e.target.removeAttribute('checked');
-//         tasks.forEach((elem) => {
-//             if (elem.id == id) {
-//                 elem.done = false;
-//             }
-//         });
-//     }
-// //    console.log(e.target.closest('.list__item'));
-//     // console.log(document.querySelectorAll('.list__item'));
-//     addTaskEllements(tasks);
-
-// };
-
-
-
-//  запасной
-const handlerListItem = (e) => {
-    if (!e.target.classList.contains('list__item')) {
-        return;
-    }
-
-    const id = e.target.getAttribute('data-id');
-    console.log(e.target.firstChild);
-    if (!e.target.firstChild.hasAttribute('checked')) {
-        tasks.forEach((elem) => {
-            if (elem.id == id) {
-                elem.done = true;
-            }
-        });
-    } else {
-        // e.target.firstChild.removeAttribute('checked');
-        tasks.forEach((elem) => {
-            if (elem.id == id) {
-                elem.done = false;
-            }
-        });
-    }
-    //    console.log(e.target.closest('.list__item'));
-    // console.log(document.querySelectorAll('.list__item'));
+const handleUpdateTask = (e) => {
+    // e.stopPropagation();
+    // console.log(e.currentTarget);
+    const idElem = e.currentTarget.getAttribute('data-id');
+    console.log(idElem);
+    tasks.forEach((elem) => {
+        if(elem.id == idElem && elem.done == false) { elem.done = true;}
+    });
+    console.log(tasks);
     renderTaskEllements(tasks);
 
 };
 
 
-const handleCheck = (e) => {
-    if (!e.target.classList.contains('list__item-checkbox')) {
-        return;
-    }
-
-    const id = e.target.closest('.list__item')
-        .getAttribute('data-id');
-    if (!e.target.hasAttribute('checked')) {
-        tasks.forEach((elem) => {
-            if (elem.id == id) {
-                elem.done = true;
-            }
-        });
-    } else {
-        e.target.removeAttribute('checked');
-        tasks.forEach((elem) => {
-            if (elem.id == id) {
-                elem.done = false;
-            }
-        });
-    }
-    //    console.log(e.target.closest('.list__item'));
-    // console.log(document.querySelectorAll('.list__item'));
-    renderTaskEllements(tasks);
-};
 
 renderTaskEllements(tasks);
-tasksList.addEventListener('click', handlerListItem);
-
 
 createTaskBtn.addEventListener('click', handleCreateTask);
