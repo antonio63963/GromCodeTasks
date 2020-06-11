@@ -81,11 +81,13 @@ const handleUpdateTask = (e) => {
     // e.stopPropagation();
     // console.log(e.currentTarget);
     const idElem = e.currentTarget.getAttribute('data-id');
-    console.log(idElem);
+    
     tasks.forEach((elem) => {
-        if(elem.id == idElem && elem.done == false) { elem.done = true;}
+        if(elem.id == idElem && elem.done == false) { elem.done = true; return;}
+        else if(elem.id == idElem && elem.done == true) { elem.done = false; return;}
+       
     });
-    console.log(tasks);
+  
     renderTaskEllements(tasks);
 
 };
