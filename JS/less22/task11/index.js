@@ -31,7 +31,7 @@ const taskInput = document.querySelector('.task-input');
 
 // dwnld existing arr
 
-const addTaskEllements = (arr) => {
+const renderTaskEllements = (arr) => {
     const tasksList = document.querySelector('.list');
     tasksList.textContent = '';
     const tasksArr = arr.sort((a, b) => a.done - b.done)
@@ -58,7 +58,7 @@ const addTaskEllements = (arr) => {
     tasksList.append(...tasksArr);
 
     const collection = document.querySelectorAll('.list__item-checkbox');
-    for(let i = 0; i < collection.length; i++) {
+    for (let i = 0; i < collection.length; i++) {
         collection[i].addEventListener('change', handleCheck);
     }
 };
@@ -73,7 +73,7 @@ const handleCreateTask = () => {
         done: false,
         id: tasks.length + 1
     });
-    addTaskEllements(tasks);
+    renderTaskEllements(tasks);
     taskInput.value = '';
 };
 
@@ -108,7 +108,9 @@ const handleCreateTask = () => {
 
 //  запасной
 const handlerListItem = (e) => {
-    if(!e.target.classList.contains('list__item') || !e.target.classList.contains('list__item')) { return;}
+    if (!e.target.classList.contains('list__item')) {
+        return;
+    }
 
     const id = e.target.getAttribute('data-id');
     console.log(e.target.firstChild);
@@ -126,43 +128,41 @@ const handlerListItem = (e) => {
             }
         });
     }
-//    console.log(e.target.closest('.list__item'));
+    //    console.log(e.target.closest('.list__item'));
     // console.log(document.querySelectorAll('.list__item'));
-    addTaskEllements(tasks);
+    renderTaskEllements(tasks);
 
 };
 
-const handleItem = (e) => {
-    const id = e.target.classList.contains('list__item');
-    console.log(id);
-}
+
 const handleCheck = (e) => {
     if (!e.target.classList.contains('list__item-checkbox')) {
-                return;
+        return;
+    }
+
+    const id = e.target.closest('.list__item')
+        .getAttribute('data-id');
+    if (!e.target.hasAttribute('checked')) {
+        tasks.forEach((elem) => {
+            if (elem.id == id) {
+                elem.done = true;
             }
-        
-            const id = e.target.closest('.list__item')
-                .getAttribute('data-id');
-            if (!e.target.hasAttribute('checked')) {
-                tasks.forEach((elem) => {
-                    if (elem.id == id) {
-                        elem.done = true;
-                    }
-                });
-            } else {
-                e.target.removeAttribute('checked');
-                tasks.forEach((elem) => {
-                    if (elem.id == id) {
-                        elem.done = false;
-                    }
-                });
+        });
+    } else {
+        e.target.removeAttribute('checked');
+        tasks.forEach((elem) => {
+            if (elem.id == id) {
+                elem.done = false;
             }
-        //    console.log(e.target.closest('.list__item'));
-            // console.log(document.querySelectorAll('.list__item'));
-            addTaskEllements(tasks);
+        });
+    }
+    //    console.log(e.target.closest('.list__item'));
+    // console.log(document.querySelectorAll('.list__item'));
+    renderTaskEllements(tasks);
 };
 
-addTaskEllements(tasks);
+renderTaskEllements(tasks);
 tasksList.addEventListener('click', handlerListItem);
+
 
 createTaskBtn.addEventListener('click', handleCreateTask);
