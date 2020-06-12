@@ -34,7 +34,8 @@ const taskInput = document.querySelector('.task-input');
 const renderTaskEllements = (arr) => {
     const tasksList = document.querySelector('.list');
     tasksList.textContent = '';
-    const tasksArr = arr.sort((a, b) => b.id - a.id).sort((a, b) => a.done - b.done)
+    const arrDouble = [...arr];
+    const tasksArr = arrDouble.sort((a, b) => b.id - a.id).sort((a, b) => a.done - b.done)
         .map(({
             text,
             done,
@@ -78,18 +79,11 @@ const handleCreateTask = () => {
 };
 
 const handleUpdateTask = (e) => {
-    // e.stopPropagation();
-    // console.log(e.currentTarget);
     const idElem = e.currentTarget.getAttribute('data-id');
-    
-    tasks.forEach((elem) => {
-        if(elem.id == idElem && elem.done == false) { elem.done = true; return;}
-        else if(elem.id == idElem && elem.done == true) { elem.done = false; return;}
-       
-    });
-  
-    renderTaskEllements(tasks);
+    const index = idElem - 1;
+    tasks[index].done = !tasks[index].done;
 
+    renderTaskEllements(tasks);
 };
 
 
