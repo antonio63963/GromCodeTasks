@@ -46,7 +46,7 @@ const getNumberSeat = (event) => {
             .dataset.lineNumber;
     const sector = event.currentTarget.dataset.sectorNumber;
    console.log(seat, line, sector);
-   boardElem.textContent = `S ${seat} - L ${line} - S ${sector}`;
+   boardElem.textContent = `S ${sector} - L ${line} - S ${seat}`;
 };
 
 const sectorsAll = document.querySelectorAll('.sector');
