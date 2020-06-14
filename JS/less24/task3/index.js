@@ -17,9 +17,7 @@
 
 // }
 
- const getDiff = (startDate, endDate) => {
-
-
+export const getDiff = (startDate, endDate) => {
     const start = new Date(startDate).getTime();
     const end = new Date(endDate).getTime();
     const resultMillisec = Math.abs(end - start);
@@ -40,7 +38,6 @@
     const seconds = timeLeft / 1000;
 
     console.log(`${days}d ${hours}h ${minutes}m ${seconds}s`);
-  
 
 };
 
