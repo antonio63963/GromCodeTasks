@@ -1,49 +1,20 @@
-// const howManyDays = (millisec) => {
-//     let timeLeft = millisec;
-//     const day = 1000 * 3600 * 24;
-//     const hour = 1000 * 3600;
-//     const minute = 1000 * 60;
-//     const sec = 1000;
-
-//     const days = Math.trunc(timeLeft / day);
-//     timeLeft = timeLeft % day;
-//     const hours = Math.trunc(timeLeft / hour);
-//     timeLeft = timeLeft % hour;
-//     const minutes = Math.trunc(timeLeft / minute);
-//     timeLeft = timeLeft % minute;
-//     const seconds = timeLeft / sec;
-
-//     console.log(`${days}d ${hours}h ${minutes}m ${seconds}s`);
-
-// }
-
 export const getDiff = (startDate, endDate) => {
-
 
     const start = new Date(startDate).getTime();
     const end = new Date(endDate).getTime();
-    const resultMillisec = end - start;
-    const millisecDiff = new Date(resultMillisec);
-    const howManyDays = (millisec) => {
-        let timeLeft = millisec;
-        const day = 1000 * 3600 * 24;
-        const hour = 1000 * 3600;
-        const minute = 1000 * 60;
-        const sec = 1000;
+    const diffPerMillisec = end - start;
     
-        const days = Math.trunc(timeLeft / day);
-        timeLeft = timeLeft % day;
-        const hours = Math.trunc(timeLeft / hour);
-        timeLeft = timeLeft % hour;
-        const minutes = Math.trunc(timeLeft / minute);
-        timeLeft = timeLeft % minute;
-        const seconds = timeLeft / sec;
-    
-        console.log(`${days}d ${hours}h ${minutes}m ${seconds}s`);
-    
-    };
-   return howManyDays(millisecDiff);
+    const arrValues = [1000 * 3600 * 24, 1000 * 3600, 1000 * 60, 1000];
+    let leftTime = Math.abs(diffPerMillisec);
+    let timeArr = [];
+    for (let i of arrValues) {
+        timeArr.push(Math.trunc(leftTime / i));
+        leftTime = leftTime % i;
+    }
 
+    const [days, hours, minutes, seconds] = timeArr;
+    console.log(`${days}d ${hours}h ${minutes}m ${seconds}s`);
+    return `${days}d ${hours}h ${minutes}m ${seconds}s`;
 };
 
 // const date1 = new Date(2020, 06, 14);
