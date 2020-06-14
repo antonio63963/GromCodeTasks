@@ -1,12 +1,5 @@
-
-
-export const getDiff = (startDate, endDate) => {
-    const start = new Date(startDate).getTime();
-    const end = new Date(endDate).getTime();
-    const resultMillisec = Math.abs(end - start);
-    const millisecDiff = new Date(resultMillisec);
-
-    let timeLeft = millisecDiff;
+const howManyDays = (millisec) => {
+    let timeLeft = millisec;
     const day = 1000 * 3600 * 24;
     const hour = 1000 * 3600;
     const minute = 1000 * 60;
@@ -18,8 +11,24 @@ export const getDiff = (startDate, endDate) => {
     timeLeft = timeLeft % hour;
     const minutes = Math.trunc(timeLeft / minute);
     timeLeft = timeLeft % minute;
-    const seconds = timeLeft / 1000;
+    const seconds = timeLeft / sec;
 
     console.log(`${days}d ${hours}h ${minutes}m ${seconds}s`);
 
+}
+
+export const getDiff = (startDate, endDate) => {
+
+
+    const start = new Date(startDate).getTime();
+    const end = new Date(endDate).getTime();
+    const resultMillisec = Math.abs(end - start);
+    const millisecDiff = new Date(resultMillisec);
+
+   return howManyDays(millisecDiff);
+
 };
+
+const date1 = new Date(2020, 06, 14);
+const date2 = new Date(2020, 06, 20, 15, 47, 59);
+getDiff(date2, date1);
