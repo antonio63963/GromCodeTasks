@@ -22,7 +22,7 @@ export const getDiff = (startDate, endDate) => {
 
     const start = new Date(startDate).getTime();
     const end = new Date(endDate).getTime();
-    const resultMillisec = Math.abs(end - start);
+    const resultMillisec = end - start;
     const millisecDiff = new Date(resultMillisec);
     const howManyDays = (millisec) => {
         let timeLeft = millisec;
