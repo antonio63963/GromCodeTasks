@@ -7,6 +7,6 @@ export const dayOfWeek = (date, days) => {
      const futureDay = new Date(futureDayMillisec);
 
      console.log(daysArr[futureDay.getDay()]);
-     return daysArr[futureDay];
+     return daysArr[futureDay.getDay()];
  };
 
