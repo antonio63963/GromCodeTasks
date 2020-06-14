@@ -17,6 +17,6 @@ export const getDiff = (startDate, endDate) => {
     return `${days}d ${hours}h ${minutes}m ${seconds}s`;
 };
 
-// const date1 = new Date(2020, 06, 14);
-// const date2 = new Date(2020, 06, 20, 15, 47, 59);
-// getDiff(date2, date1);
+const date1 = new Date(2020, 06, 14);
+const date2 = new Date(2020, 06, 20, 15, 47, 59);
+getDiff(date2, date1);
