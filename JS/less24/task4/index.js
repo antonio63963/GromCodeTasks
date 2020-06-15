@@ -2,31 +2,31 @@ const tasks = [{
         text: 'Buy milk',
         done: false,
         id: 1,
-        dateDone: undefined,
+        dateDone: null,
     },
     {
         text: 'Pick up Tom from airport',
         done: false,
         id: 2,
-        dateDone: undefined,
+        dateDone: null,
     },
     {
         text: 'Visit party',
         done: false,
         id: 3,
-        dateDone: undefined,
+        dateDone: null,
     },
     {
         text: 'Visit doctor',
         done: false,
         id: 4,
-        dateDone: undefined,
+        dateDone: 1593092934000,
     },
     {
         text: 'Buy meat',
         done: false,
         id: 5,
-        dateDone: undefined,
+        dateDone: 1593352134000,
     },
 ];
 
@@ -43,7 +43,7 @@ const renderTaskEllements = (arr) => {
     tasksList.textContent = '';
     const arrDouble = [...arr];
    
-   let existedTasksArr = [...arrDouble].sort((a, b) => b.dateDone - a.dateDone)
+   let existedTasksArr = [...arrDouble].sort((a, b) => a.dateDone - b.dateDone)
    .filter(item => item.dateDone);
 
    let notExistedTasksArr = [...arrDouble].sort((a, b) => b.id - a.id)
