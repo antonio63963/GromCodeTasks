@@ -35,7 +35,7 @@ export const studentsBirthDays = (students) => {
         monthesArr.forEach((month, index) => {
             if(index == dateArr[0]) {
             month[1].push([student.name, dateArr[1]]);
-                month[1].sort((a, b) => a[1] - b[1]);
+                month[1].sort((a, b) => b[1] - a[1]);
             }
         });
     });
