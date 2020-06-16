@@ -10,10 +10,7 @@ const students = [{
         name: 'Sam',
         birthday: '03/15/2010'
     },
-    {
-        name: 'Jack',
-        birthday: '03/25/2001'
-    },
+    
    
 ];
 
