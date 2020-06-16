@@ -91,8 +91,8 @@ const handleCreateTask = () => {
 };
 
 const handleUpdateTask = (e) => {
-    
-    const idElem = e.target.getAttribute('data-id');
+    if(!e.target.classList.contains('list__item-checkbox')) { return;}
+    const idElem = e.target.closest('.list__item').getAttribute('data-id');
     console.log(e.target);
     const index = idElem - 1;
     tasks[index].done = !tasks[index].done;
