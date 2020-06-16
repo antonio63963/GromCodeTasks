@@ -24,11 +24,11 @@ const students = [{
  3. создаю результирующий объект
    
 */
-export const studentsBirthDays = (students) => {
+ const studentsBirthDays = (students) => {
     const copyArr = [...students];
     let monthesArr = [['null', []], ['Jan', []], ['Feb', []], ['Mar', []], ['Apr', []], ['May', []], ['Jun', []], ['Jul', []], ['Aug', []], ['Sept', []], ['Oct', []], ['Nov', []], ['Dec', []]];
-    let pushedStudents = [];
-    const gradationByBirthday = {rrrr: "fff",};
+  
+    const gradationByBirthday = {};
 
     copyArr.forEach((student) => {
         const dateArr = student.birthday.split('/');
@@ -42,16 +42,16 @@ export const studentsBirthDays = (students) => {
     // console.log(monthesArr);
     monthesArr.forEach(elem => {
             if(elem[1].length > 0 &&  elem !== 'null') {
-                pushedStudents[elem[0]] = elem[1].map(name => name[0]);
+                gradationByBirthday[elem[0]] = elem[1].map(name => name[0]);
             }
     })
-    return pushedStudents;
+    return gradationByBirthday;
    
 
  }
 
-// studentsBirthDays(students);
-// console.log(studentsBirthDays(students));
+studentsBirthDays(students);
+console.log(studentsBirthDays(students));
 
 // const birth = {
 //     Jan: ['Tom'],
