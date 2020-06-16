@@ -24,7 +24,7 @@ const students = [{
  3. создаю результирующий объект
    
 */
- const studentsBirthDays = (students) => {
+export const studentsBirthDays = (students) => {
     const copyArr = [...students];
     let monthesArr = [['null', []], ['Jan', []], ['Feb', []], ['Mar', []], ['Apr', []], ['May', []], ['Jun', []], ['Jul', []], ['Aug', []], ['Sept', []], ['Oct', []], ['Nov', []], ['Dec', []]];
     let pushedStudents = [];
@@ -50,8 +50,8 @@ const students = [{
 
  }
 
-studentsBirthDays(students);
-console.log(studentsBirthDays(students));
+// studentsBirthDays(students);
+// console.log(studentsBirthDays(students));
 
 // const birth = {
 //     Jan: ['Tom'],
