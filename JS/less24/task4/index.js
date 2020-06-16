@@ -2,31 +2,31 @@ const tasks = [{
         text: 'Buy milk',
         done: false,
         id: 1,
-        dateDone: null,
+        dateDone: undefined,
     },
     {
         text: 'Pick up Tom from airport',
         done: false,
         id: 2,
-        dateDone: null,
+        dateDone: undefined,
     },
     {
         text: 'Visit party',
         done: false,
         id: 3,
-        dateDone: null,
+        dateDone: undefined,
     },
     {
         text: 'Visit doctor',
-        done: false,
+        done: true,
         id: 4,
-        dateDone: 1593092934000,
+        dateDone: 1529502534000,
     },
     {
         text: 'Buy meat',
-        done: false,
+        done: true,
         id: 5,
-        dateDone: 1593352134000,
+        dateDone: 1592660934000,
     },
 ];
 
@@ -43,18 +43,21 @@ const renderTaskEllements = (arr) => {
     tasksList.textContent = '';
     const arrDouble = [...arr];
    
-   let existedTasksArr = [...arrDouble].sort((a, b) => a.dateDone - b.dateDone)
-   .filter(item => item.dateDone);
+//    let existedTasksArr = [...arrDouble].sort((a, b) => b.dateDone - a.dateDone)
+//    .filter(item => item.dateDone);
 
-   let notExistedTasksArr = [...arrDouble].sort((a, b) => b.id - a.id)
-   .filter(item => !item.dateDone);
-    console.log(existedTasksArr);
+//    let notExistedTasksArr = [...arrDouble].sort((a, b) => b.id - a.id)
+//    .filter(item => !item.dateDone);
+//     console.log(existedTasksArr);
+//     if(existedTasksArr.length == 0) {console.log(notExistedTasksArr);}
     
-    let unaitedTasksArr = notExistedTasksArr
-        .concat(existedTasksArr);
+    // let unaitedTasksArr = notExistedTasksArr
+    //     .concat(existedTasksArr);
 
 
-    const resultArr = unaitedTasksArr.sort((a, b) => a.done - b.done)
+    const resultArr = arrDouble.sort((a, b) => b.id - a.id)
+    .sort((a, b) => b.dateDone - a.dateDone)
+    .sort((a, b) => a.done - b.done)
         .map(({
             text,
             done,
@@ -92,7 +95,8 @@ const handleCreateTask = () => {
     tasks.push({
         text: taskInput.value,
         done: false,
-        id: tasks.length + 1
+        id: tasks.length + 1,
+        dateDone: undefined
     });
     renderTaskEllements(tasks);
     taskInput.value = '';
@@ -102,8 +106,11 @@ const handleUpdateTask = (e) => {
     const idElem = e.currentTarget.getAttribute('data-id');
     const index = idElem - 1;
     tasks[index].done = !tasks[index].done;
-    tasks[index].dateDone = new Date().getTime();
-    // console.log(tasks);
+    tasks[index].dateDone = 
+    tasks[index].dateDone ? undefined :
+    new Date().getTime();
+    
+
     renderTaskEllements(tasks);
 };
 
@@ -113,4 +120,4 @@ renderTaskEllements(tasks);
 
 createTaskBtn.addEventListener('click', handleCreateTask);
 
-console.log(new Date(2020, 05, 25, 16, 48, 54).getTime());
+console.log(new Date(2018, 05, 20, 16, 48, 54).getTime());
