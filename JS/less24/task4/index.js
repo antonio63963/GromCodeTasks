@@ -43,18 +43,6 @@ const renderTaskEllements = (arr) => {
     tasksList.textContent = '';
     const arrDouble = [...arr];
    
-//    let existedTasksArr = [...arrDouble].sort((a, b) => b.dateDone - a.dateDone)
-//    .filter(item => item.dateDone);
-
-//    let notExistedTasksArr = [...arrDouble].sort((a, b) => b.id - a.id)
-//    .filter(item => !item.dateDone);
-//     console.log(existedTasksArr);
-//     if(existedTasksArr.length == 0) {console.log(notExistedTasksArr);}
-    
-    // let unaitedTasksArr = notExistedTasksArr
-    //     .concat(existedTasksArr);
-
-
     const resultArr = arrDouble.sort((a, b) => b.id - a.id)
     .sort((a, b) => b.dateDone - a.dateDone)
     .sort((a, b) => a.done - b.done)
@@ -81,10 +69,10 @@ const renderTaskEllements = (arr) => {
 
     tasksList.append(...resultArr);
 //add listeners to every li elem
-    const collection = document.querySelectorAll('.list__item');
-    for (let i = 0; i < collection.length; i++) {
-        collection[i].addEventListener('click', handleUpdateTask);
-    }
+    // const collection = document.querySelectorAll('.list__item');
+    // for (let i = 0; i < collection.length; i++) {
+    //     collection[i].addEventListener('click', handleUpdateTask);
+    // }
 };
 // handlers
 
@@ -103,13 +91,14 @@ const handleCreateTask = () => {
 };
 
 const handleUpdateTask = (e) => {
-    const idElem = e.currentTarget.getAttribute('data-id');
+    
+    const idElem = e.target.getAttribute('data-id');
+    console.log(e.target);
     const index = idElem - 1;
     tasks[index].done = !tasks[index].done;
     tasks[index].dateDone = 
     tasks[index].dateDone ? undefined :
     new Date().getTime();
-    
 
     renderTaskEllements(tasks);
 };
@@ -117,7 +106,6 @@ const handleUpdateTask = (e) => {
 
 
 renderTaskEllements(tasks);
-
+tasksList.addEventListener('click', handleUpdateTask);
 createTaskBtn.addEventListener('click', handleCreateTask);
 
-console.log(new Date(2018, 05, 20, 16, 48, 54).getTime());
