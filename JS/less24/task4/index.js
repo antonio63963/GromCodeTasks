@@ -20,13 +20,13 @@ const tasks = [{
         text: 'Visit doctor',
         done: true,
         id: 4,
-        dateDone: 1529502534000,
+        dateDone: 1592086756593,
     },
     {
         text: 'Buy meat',
         done: true,
         id: 5,
-        dateDone: 1592660934000,
+        dateDone: 1591886756593,
     },
 ];
 
@@ -42,10 +42,12 @@ const renderTaskEllements = (arr) => {
     const tasksList = document.querySelector('.list');
     tasksList.textContent = '';
     const arrDouble = [...arr];
-   
-    const resultArr = arrDouble.sort((a, b) => b.id - a.id)
-    .sort((a, b) => b.dateDone - a.dateDone)
-    .sort((a, b) => a.done - b.done)
+    const executedArr = [...arrDouble].filter(({ dateDone }) => dateDone !== undefined).sort((a, b) => b.dateDone - a.dateDone);
+    console.log(executedArr);
+    const notExecutedArr = [...arrDouble].filter(({ dateDone }) => dateDone == undefined).sort((a, b) => b.id - a.id);
+    const unaitedArr = notExecutedArr.concat(executedArr);
+
+    const resultArr = unaitedArr
         .map(({
             text,
             done,
@@ -93,7 +95,7 @@ const handleCreateTask = () => {
 const handleUpdateTask = (e) => {
     if(!e.target.classList.contains('list__item-checkbox')) { return;}
     const idElem = e.target.closest('.list__item').getAttribute('data-id');
-    console.log(e.target);
+ 
     const index = idElem - 1;
     tasks[index].done = !tasks[index].done;
     tasks[index].dateDone = 
@@ -108,4 +110,6 @@ const handleUpdateTask = (e) => {
 renderTaskEllements(tasks);
 tasksList.addEventListener('click', handleUpdateTask);
 createTaskBtn.addEventListener('click', handleCreateTask);
+
+consol
 
