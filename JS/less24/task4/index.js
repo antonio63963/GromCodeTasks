@@ -42,12 +42,14 @@ const renderTaskEllements = (arr) => {
     const tasksList = document.querySelector('.list');
     tasksList.textContent = '';
     const arrDouble = [...arr];
-    const executedArr = [...arrDouble].filter(({ dateDone }) => dateDone !== undefined).sort((a, b) => b.dateDone - a.dateDone);
-    console.log(executedArr);
-    const notExecutedArr = [...arrDouble].filter(({ dateDone }) => dateDone == undefined).sort((a, b) => b.id - a.id);
-    const unaitedArr = notExecutedArr.concat(executedArr);
+    // const executedArr = [...arrDouble].filter(({ dateDone }) => dateDone !== undefined).sort((a, b) => b.dateDone - a.dateDone);
+    // console.log(executedArr);
+    // const notExecutedArr = [...arrDouble].filter(({ dateDone }) => dateDone == undefined).sort((a, b) => b.id - a.id);
+    // const unaitedArr = notExecutedArr.concat(executedArr);
 
-    const resultArr = unaitedArr
+    const resultArr = arrDouble.sort((a, b) => b.id - a.id)
+    .sort((a, b) => a.done - b.done)
+    .sort((a, b) => b.dateDone - a.dateDone)
         .map(({
             text,
             done,
