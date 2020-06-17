@@ -38,22 +38,18 @@ const taskInput = document.querySelector('.task-input');
 
 // dwnld existing arr
 
-/* 
-arrDouble.sort((a, b) => b.id - a.id)
-    .sort((a, b) => a.done - b.done)
-    .sort((a, b) => b.dateDone - a.dateDone)
-*/
+
+
 
 const renderTaskEllements = (arr) => {
     const tasksList = document.querySelector('.list');
     tasksList.textContent = '';
     const arrDouble = [...arr];
-    const executedArr = [...arrDouble].filter(({ dateDone }) => dateDone !== undefined).sort((a, b) => b.dateDone - a.dateDone);
-    console.log(executedArr);
-    const notExecutedArr = [...arrDouble].filter(({ dateDone }) => dateDone == undefined).sort((a, b) => b.id - a.id);
-    const unaitedArr = notExecutedArr.concat(executedArr);
-
-    const resultArr = unaitedArr
+ 
+    const resultArr = arrDouble.sort((a, b)  => {
+        return  (a.id - b.id) && (a.done - b.done) || (b.dateDone - a.dateDone);
+      })
+    //   ;console.log(resultArr);
         .map(({
             text,
             done,
@@ -74,13 +70,9 @@ const renderTaskEllements = (arr) => {
             return taskItem;
         });
 
-
+console.log(resultArr);
     tasksList.append(...resultArr);
-//add listeners to every li elem
-    // const collection = document.querySelectorAll('.list__item');
-    // for (let i = 0; i < collection.length; i++) {
-    //     collection[i].addEventListener('click', handleUpdateTask);
-    // }
+
 };
 // handlers
 
@@ -99,7 +91,8 @@ const handleCreateTask = () => {
 };
 
 const handleUpdateTask = (e) => {
-    if(!e.target.classList.contains('list__item-checkbox')) { return;}
+    if(!e.target == 'checkbox') { return;}
+   
     const idElem = e.target.closest('.list__item').getAttribute('data-id');
  
     const index = idElem - 1;
