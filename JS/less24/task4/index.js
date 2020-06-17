@@ -39,6 +39,8 @@ const taskInput = document.querySelector('.task-input');
 // dwnld existing arr
 
 
+const sorting = (a, b) => 
+    (a.id - b.id) && (a.done - b.done) || (b.dateDone - a.dateDone); 
 
 
 const renderTaskEllements = (arr) => {
@@ -46,9 +48,7 @@ const renderTaskEllements = (arr) => {
     tasksList.textContent = '';
     const arrDouble = [...arr];
  
-    const resultArr = arrDouble.sort((a, b)  => {
-        return  (a.id - b.id) && (a.done - b.done) || (b.dateDone - a.dateDone);
-      })
+    const resultArr = arrDouble.sort(sorting)
     //   ;console.log(resultArr);
         .map(({
             text,
@@ -70,7 +70,7 @@ const renderTaskEllements = (arr) => {
             return taskItem;
         });
 
-console.log(resultArr);
+// console.log(resultArr);
     tasksList.append(...resultArr);
 
 };
