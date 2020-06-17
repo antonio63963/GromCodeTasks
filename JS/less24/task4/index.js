@@ -113,5 +113,5 @@ renderTaskEllements(tasks);
 tasksList.addEventListener('click', handleUpdateTask);
 createTaskBtn.addEventListener('click', handleCreateTask);
 
-consol
+
 
