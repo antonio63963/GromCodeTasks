@@ -77,7 +77,7 @@ export const studentsBirthDays = (students) => {
 
     });
     console.log(birthdayList);
-    return {birthdayList};
+    return birthdayList;
 };
 
 studentsBirthDays(students);
