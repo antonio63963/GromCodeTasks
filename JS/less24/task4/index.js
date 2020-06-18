@@ -2,19 +2,19 @@ const tasks = [{
         text: 'Buy milk',
         done: false,
         id: 1,
-        dateDone: undefined,
+        dateDone: new Date().getTime(),
     },
     {
         text: 'Pick up Tom from airport',
         done: false,
         id: 2,
-        dateDone: undefined,
+        dateDone: new Date().getTime(),
     },
     {
         text: 'Visit party',
         done: false,
         id: 3,
-        dateDone: undefined,
+        dateDone: new Date().getTime(),
     },
     {
         text: 'Visit doctor',
@@ -39,8 +39,19 @@ const taskInput = document.querySelector('.task-input');
 // dwnld existing arr
 
 
-const sorting = (a, b) => 
-    (a.id - b.id) && (a.done - b.done) || (b.dateDone - a.dateDone); 
+const sorting = (a, b) => {
+    // if(b.id - a.id !== 0) {
+    //   return  b.id - a.id;
+    // }
+    if(a.done - b.done !== 0) {
+        return a.done - b.done;
+    }
+    if(a.done) {
+     return   b.dateDone - a.dateDone;
+    }
+  return b.id - a.id; 
+};
+
 
 
 const renderTaskEllements = (arr) => {
@@ -53,7 +64,7 @@ const renderTaskEllements = (arr) => {
         .map(({
             text,
             done,
-            id
+            id,
         }) => {
             let taskItem = document.createElement('li');
             taskItem.classList.add('list__item');
@@ -84,7 +95,7 @@ const handleCreateTask = () => {
         text: taskInput.value,
         done: false,
         id: tasks.length + 1,
-        dateDone: undefined
+        dateDone: new Date().getTime()
     });
     renderTaskEllements(tasks);
     taskInput.value = '';
@@ -93,13 +104,13 @@ const handleCreateTask = () => {
 const handleUpdateTask = (e) => {
     if(!e.target == 'checkbox') { return;}
    
-    const idElem = e.target.closest('.list__item').getAttribute('data-id');
+    const idElem = e.target.getAttribute('data-id');
  
     const index = idElem - 1;
     tasks[index].done = !tasks[index].done;
-    tasks[index].dateDone = 
-    tasks[index].dateDone ? undefined :
-    new Date().getTime();
+    // tasks[index].dateDone = tasks[index].dateDone ? 
+    // undefined :
+    // new Date().getTime();
 
     renderTaskEllements(tasks);
 };
