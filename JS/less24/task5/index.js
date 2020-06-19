@@ -68,7 +68,7 @@ const sorting = (a, b) => {
     }
 }
 
- const studentsBirthDays = (students) => {
+export const studentsBirthDays = (students) => {
     const copyArr = [...students];
     let birthdayList = {};
     const formatedDateArr = copyArr.map((student) => {
