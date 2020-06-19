@@ -14,6 +14,18 @@ const students = [{
         name: 'Jack',
         birthday: '03/25/2001'
     },
+    {
+        name: 'Bill',
+        birthday: '05/30/2011'
+    },
+    {
+        name: 'Ann',
+        birthday: '05/12/2010'
+    },
+    {
+        name: 'Tony',
+        birthday: '05/10/2011'
+    },
 
 ];
 
@@ -56,7 +68,7 @@ const sorting = (a, b) => {
     }
 }
 
-export const studentsBirthDays = (students) => {
+ const studentsBirthDays = (students) => {
     const copyArr = [...students];
     let birthdayList = {};
     const formatedDateArr = copyArr.map((student) => {
