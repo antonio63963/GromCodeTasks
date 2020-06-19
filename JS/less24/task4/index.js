@@ -40,16 +40,13 @@ const taskInput = document.querySelector('.task-input');
 
 
 const sorting = (a, b) => {
-    // if(b.id - a.id !== 0) {
-    //   return  b.id - a.id;
-    // }
-    if(a.done - b.done !== 0) {
+    if (a.done - b.done !== 0) {
         return a.done - b.done;
     }
-    if(a.done) {
-     return   b.dateDone - a.dateDone;
+    if (a.done) {
+        return b.dateDone - a.dateDone;
     }
-  return b.id - a.id; 
+    return b.id - a.id;
 };
 
 
@@ -58,9 +55,9 @@ const renderTaskEllements = (arr) => {
     const tasksList = document.querySelector('.list');
     tasksList.textContent = '';
     const arrDouble = [...arr];
- 
+
     const resultArr = arrDouble.sort(sorting)
-    //   ;console.log(resultArr);
+        //   ;console.log(resultArr);
         .map(({
             text,
             done,
@@ -81,7 +78,7 @@ const renderTaskEllements = (arr) => {
             return taskItem;
         });
 
-// console.log(resultArr);
+    // console.log(resultArr);
     tasksList.append(...resultArr);
 
 };
@@ -102,12 +99,13 @@ const handleCreateTask = () => {
 };
 
 const handleUpdateTask = (e) => {
-    if(!e.target == 'checkbox') { return;}
-   
-    const idElem = e.target.getAttribute('data-id');
- 
+    if (e.target.type == 'checkbox') {
+
+    const idElem = e.target.dataset.id;
+    console.log(idElem);
     const index = idElem - 1;
     tasks[index].done = !tasks[index].done;
+}
     // tasks[index].dateDone = tasks[index].dateDone ? 
     // undefined :
     // new Date().getTime();
@@ -120,6 +118,3 @@ const handleUpdateTask = (e) => {
 renderTaskEllements(tasks);
 tasksList.addEventListener('click', handleUpdateTask);
 createTaskBtn.addEventListener('click', handleCreateTask);
-
-
-
