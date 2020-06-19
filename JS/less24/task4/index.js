@@ -99,7 +99,7 @@ const handleCreateTask = () => {
         done: false,
         id: tasks.length + 1,
         dateCreate: new Date(),
-        dateDone: new Date()
+        dateDone: undefined
     });
     renderTaskEllements(tasks);
     taskInput.value = '';
