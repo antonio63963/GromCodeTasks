@@ -2,31 +2,36 @@ const tasks = [{
         text: 'Buy milk',
         done: false,
         id: 1,
-        dateDone: new Date().getTime(),
+        dateCreate: new Date,
+        dateDone: undefined,
     },
     {
         text: 'Pick up Tom from airport',
         done: false,
         id: 2,
-        dateDone: new Date().getTime(),
+        dateCreate: new Date,
+        dateDone: undefined,
     },
     {
         text: 'Visit party',
         done: false,
         id: 3,
-        dateDone: new Date().getTime(),
+        dateCreate: new Date,
+        dateDone: undefined,
     },
     {
         text: 'Visit doctor',
-        done: true,
+        done: false,
         id: 4,
-        dateDone: 1592086756593,
+        dateCreate: new Date,
+        dateDone: undefined,
     },
     {
         text: 'Buy meat',
-        done: true,
+        done: false,
         id: 5,
-        dateDone: 1591886756593,
+        dateCreate: new Date,
+        dateDone: undefined,
     },
 ];
 
@@ -46,7 +51,7 @@ const sorting = (a, b) => {
     if (a.done) {
         return b.dateDone - a.dateDone;
     }
-    return b.id - a.id;
+    return b.dateCreate - a.dateCreate;
 };
 
 
@@ -93,20 +98,28 @@ const handleCreateTask = () => {
         text: taskInput.value,
         done: false,
         id: tasks.length + 1,
-        dateDone: new Date().getTime()
+        dateCreate: new Date(),
+        dateDone: new Date()
     });
     renderTaskEllements(tasks);
     taskInput.value = '';
 };
 
-const handleUpdateTask = (e) => {
+const handleUpdateTask = (e) => { 
+
     if (e.target.type !== 'checkbox') return;
+
         const idElem = e.target.dataset.id - 1;
+        console.log(idElem);
         tasks[idElem].done = !tasks[idElem].done;
+        tasks[idElem].dateCreate = new Date();
+        tasks[idElem].dateDone = new Date();
+
+          
     
     // tasks[index].dateDone = tasks[index].dateDone ? 
     // undefined :
-    // new Date().getTime();
+    // new Date();
 
     renderTaskEllements(tasks);
     console.log(tasks)
