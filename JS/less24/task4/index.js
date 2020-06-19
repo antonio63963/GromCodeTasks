@@ -65,10 +65,11 @@ const renderTaskEllements = (arr) => {
         }) => {
             let taskItem = document.createElement('li');
             taskItem.classList.add('list__item');
-            taskItem.dataset.id = id;
+            
             let checkbox = document.createElement('input');
             checkbox.classList.add('list__item-checkbox');
             checkbox.setAttribute('type', 'checkbox');
+            checkbox.dataset.id = id;
             if (done) {
                 checkbox.setAttribute('checked', done);
                 taskItem.classList.add('list__item_done');
@@ -99,18 +100,16 @@ const handleCreateTask = () => {
 };
 
 const handleUpdateTask = (e) => {
-    if (e.target.type == 'checkbox') {
-
-    const idElem = e.target.dataset.id;
-    console.log(idElem);
-    const index = idElem - 1;
-    tasks[index].done = !tasks[index].done;
-}
+    if (e.target.type !== 'checkbox') return;
+        const idElem = e.target.dataset.id - 1;
+        tasks[idElem].done = !tasks[idElem].done;
+    
     // tasks[index].dateDone = tasks[index].dateDone ? 
     // undefined :
     // new Date().getTime();
 
     renderTaskEllements(tasks);
+    console.log(tasks)
 };
 
 
