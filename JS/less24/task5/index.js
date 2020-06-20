@@ -33,7 +33,10 @@ const students = [{
 export const studentsBirthDays = (students) => {
     const monthesArr = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Dec'];
     let birthdayList = {};
-    const copyArr = [...students].sort((a, b) => new Date(a.birthday).getDate() - new Date(b.birthday).getDate);
+
+    const copyArr = [...students].sort((a, b) => 
+    new Date(a.birthday).getDate() - new Date(b.birthday).getDate);
+    
         console.log(copyArr);
 
     copyArr.forEach(student => {
