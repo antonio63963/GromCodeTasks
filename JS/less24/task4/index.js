@@ -109,11 +109,12 @@ const handleUpdateTask = (e) => {
 
     if (e.target.type !== 'checkbox') return;
 
-        const idElem = e.target.dataset.id - 1;
+        const idElem = e.target.dataset.id;
         console.log(idElem);
-        tasks[idElem].done = !tasks[idElem].done;
-        tasks[idElem].dateCreate = new Date();
-        tasks[idElem].dateDone = new Date();
+        const task = tasks.find(student => student.id == idElem);
+        task.done = !task.done;
+        task.dateCreate = new Date();
+        task.dateDone = new Date();
 
           
     
@@ -132,4 +133,3 @@ tasksList.addEventListener('click', handleUpdateTask);
 createTaskBtn.addEventListener('click', handleCreateTask);
 
 
-console.log(new Date().getTime())
