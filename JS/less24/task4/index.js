@@ -21,17 +21,17 @@ const tasks = [{
     },
     {
         text: 'Visit doctor',
-        done: false,
+        done: true,
         id: 4,
         dateCreate: new Date,
-        dateDone: undefined,
+        dateDone: 1592358805803,
     },
     {
         text: 'Buy meat',
-        done: false,
+        done: true,
         id: 5,
         dateCreate: new Date,
-        dateDone: undefined,
+        dateDone: 1592458805803,
     },
 ];
 
@@ -130,3 +130,6 @@ const handleUpdateTask = (e) => {
 renderTaskEllements(tasks);
 tasksList.addEventListener('click', handleUpdateTask);
 createTaskBtn.addEventListener('click', handleCreateTask);
+
+
+console.log(new Date().getTime())
