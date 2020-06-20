@@ -40,9 +40,7 @@ const tasksList = document.querySelector('.list');
 const createTaskBtn = document.querySelector('.create-task-btn');
 const taskInput = document.querySelector('.task-input');
 
-
 // dwnld existing arr
-
 
 const sorting = (a, b) => {
     if (a.done - b.done !== 0) {
@@ -54,15 +52,11 @@ const sorting = (a, b) => {
     return b.dateCreate - a.dateCreate;
 };
 
-
-
 const renderTaskEllements = (arr) => {
     const tasksList = document.querySelector('.list');
     tasksList.textContent = '';
-    const arrDouble = [...arr];
 
-    const resultArr = arrDouble.sort(sorting)
-        //   ;console.log(resultArr);
+    const resultArr =  [...arr].sort(sorting)
         .map(({
             text,
             done,
@@ -84,12 +78,9 @@ const renderTaskEllements = (arr) => {
             return taskItem;
         });
 
-    // console.log(resultArr);
     tasksList.append(...resultArr);
-
 };
 // handlers
-
 const handleCreateTask = () => {
     if (taskInput.value == '') {
         return;
@@ -115,15 +106,8 @@ const handleUpdateTask = (e) => {
         task.done = !task.done;
         task.dateCreate = new Date();
         task.dateDone = new Date();
-
-          
-    
-    // tasks[index].dateDone = tasks[index].dateDone ? 
-    // undefined :
-    // new Date();
-
+  
     renderTaskEllements(tasks);
-    console.log(tasks)
 };
 
 
