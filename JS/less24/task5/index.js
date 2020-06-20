@@ -3,6 +3,11 @@ const students = [{
         birthday: '01/15/2010',
     },
     {
+        name: 'Tony',
+        birthday: '05/10/2011'
+    },
+
+    {
         name: 'Ben',
         birthday: '01/17/2008'
     },
@@ -22,11 +27,7 @@ const students = [{
         name: 'Ann',
         birthday: '05/12/2010'
     },
-    {
-        name: 'Tony',
-        birthday: '05/10/2011'
-    },
-
+    
 ];
 
 export const studentsBirthDays = (students) => {
@@ -34,7 +35,7 @@ export const studentsBirthDays = (students) => {
     let birthdayList = {};
 
     const copyArr = [...students].sort((a, b) =>
-        new Date(b.birthday).getDate() - new Date(a.birthday).getDate());
+        new Date(a.birthday).getDate() - new Date(b.birthday).getDate());
 
     console.log(copyArr);
 
