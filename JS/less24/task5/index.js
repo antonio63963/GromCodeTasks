@@ -1,34 +1,34 @@
-const students = [{
-        name: 'Tom',
-        birthday: '01/15/2010',
-    },
-    {
-        name: 'Tony',
-        birthday: '05/10/2011'
-    },
+// const students = [{
+//         name: 'Tom',
+//         birthday: '01/15/2010',
+//     },
+//     {
+//         name: 'Tony',
+//         birthday: '05/10/2011'
+//     },
 
-    {
-        name: 'Ben',
-        birthday: '01/17/2008'
-    },
-    {
-        name: 'Sam',
-        birthday: '03/15/2010'
-    },
-    {
-        name: 'Jack',
-        birthday: '03/25/2001'
-    },
-    {
-        name: 'Bill',
-        birthday: '05/30/2011'
-    },
-    {
-        name: 'Ann',
-        birthday: '05/12/2010'
-    },
+//     {
+//         name: 'Ben',
+//         birthday: '01/17/2008'
+//     },
+//     {
+//         name: 'Sam',
+//         birthday: '03/15/2010'
+//     },
+//     {
+//         name: 'Jack',
+//         birthday: '03/25/2001'
+//     },
+//     {
+//         name: 'Bill',
+//         birthday: '05/30/2011'
+//     },
+//     {
+//         name: 'Ann',
+//         birthday: '05/12/2010'
+//     },
 
-];
+// ];
 
 export const studentsBirthDays = (students) => {
     const monthesArr = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Dec'];
@@ -48,5 +48,3 @@ export const studentsBirthDays = (students) => {
     console.log(birthdayList);
     return birthdayList;
 };
-
-studentsBirthDays(students);
