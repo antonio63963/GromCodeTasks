@@ -30,12 +30,12 @@ const students = [{
 
 ];
 
-export const studentsBirthDays = (students) => {
+ const studentsBirthDays = (students) => {
     const monthesArr = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Dec'];
     let birthdayList = {};
 
     [...students].sort((a, b) =>
-        new Date(a.birthday).getDate() - new Date(b.birthday).getDate())
+        new Date(b.birthday).getDate() - new Date(a.birthday).getDate())
         .forEach(student => {
             const month = monthesArr[new Date(student.birthday).getMonth()];
 
@@ -47,6 +47,6 @@ export const studentsBirthDays = (students) => {
         });
     console.log(birthdayList);
     return birthdayList;
-}
+};
 
 studentsBirthDays(students);
