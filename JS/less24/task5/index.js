@@ -35,7 +35,7 @@ export const studentsBirthDays = (students) => {
     let birthdayList = {};
 
     [...students].sort((a, b) =>
-        new Date(b.birthday).getDate() - new Date(a.birthday).getDate())
+        new Date(a.birthday).getDate() - new Date(b.birthday).getDate())
         .forEach(student => {
             const month = monthesArr[new Date(student.birthday).getMonth()];
 
