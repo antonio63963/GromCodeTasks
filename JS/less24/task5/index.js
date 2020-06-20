@@ -29,20 +29,19 @@ const students = [{
 
 ];
 
-
 export const studentsBirthDays = (students) => {
     const monthesArr = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Dec'];
     let birthdayList = {};
 
-    const copyArr = [...students].sort((a, b) => 
-    new Date(a.birthday).getDate() - new Date(b.birthday).getDate);
-    
-        console.log(copyArr);
+    const copyArr = [...students].sort((a, b) =>
+        new Date(b.birthday).getDate() - new Date(a.birthday).getDate());
+
+    console.log(copyArr);
 
     copyArr.forEach(student => {
-        const month =   monthesArr[new Date(student.birthday).getMonth()];
-        
-        if(birthdayList.hasOwnProperty(month)) {
+        const month = monthesArr[new Date(student.birthday).getMonth()];
+
+        if (birthdayList.hasOwnProperty(month)) {
             birthdayList[month].push(student.name);
         } else {
             birthdayList[month] = [student.name];
@@ -53,4 +52,3 @@ export const studentsBirthDays = (students) => {
 }
 
 studentsBirthDays(students);
-
