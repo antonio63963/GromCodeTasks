@@ -105,11 +105,12 @@ const handleUpdateTask = (e) => {
     const task = tasks.find(student => student.id == idElem);
     task.done = !task.done;
 
-    task.done ? task.dateCreate = undefined &&
-        task.dateDone = new Date() :
-        task.dateCreate = undefined && task.dateDone = new Date();
-    // task.dateCreate = new Date();
-    // task.dateDone = new Date();
+    if(task.done == true) {task.dateCreate = undefined;
+        task.dateDone = new Date();
+     } else {
+        task.dateCreate = undefined;
+        task.dateDone = new Date();
+     }
 
     renderTaskEllements(tasks);
 };
