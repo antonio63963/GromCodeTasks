@@ -2,28 +2,28 @@ const tasks = [{
         text: 'Buy milk',
         done: false,
         id: 1,
-        dateCreate: new Date,
+        dateCreate: 1592358805803,
         dateDone: undefined,
     },
     {
         text: 'Pick up Tom from airport',
         done: false,
         id: 2,
-        dateCreate: new Date,
+        dateCreate: 159235880403,
         dateDone: undefined,
     },
     {
         text: 'Visit party',
         done: false,
         id: 3,
-        dateCreate: new Date,
+        dateCreate: 1592358803503,
         dateDone: undefined,
     },
     {
         text: 'Visit doctor',
         done: true,
         id: 4,
-        dateCreate: new Date,
+        dateCreate: 1592358880803,
         dateDone: 1592358805803,
     },
     {
@@ -56,7 +56,7 @@ const renderTaskEllements = (arr) => {
     const tasksList = document.querySelector('.list');
     tasksList.textContent = '';
 
-    const resultArr =  [...arr].sort(sorting)
+    const resultArr = [...arr].sort(sorting)
         .map(({
             text,
             done,
@@ -64,7 +64,7 @@ const renderTaskEllements = (arr) => {
         }) => {
             let taskItem = document.createElement('li');
             taskItem.classList.add('list__item');
-            
+
             let checkbox = document.createElement('input');
             checkbox.classList.add('list__item-checkbox');
             checkbox.setAttribute('type', 'checkbox');
@@ -96,17 +96,21 @@ const handleCreateTask = () => {
     taskInput.value = '';
 };
 
-const handleUpdateTask = (e) => { 
+const handleUpdateTask = (e) => {
 
     if (e.target.type !== 'checkbox') return;
 
-        const idElem = e.target.dataset.id;
-        console.log(idElem);
-        const task = tasks.find(student => student.id == idElem);
-        task.done = !task.done;
-        task.dateCreate = new Date();
-        task.dateDone = new Date();
-  
+    const idElem = e.target.dataset.id;
+
+    const task = tasks.find(student => student.id == idElem);
+    task.done = !task.done;
+
+    task.done ? task.dateCreate = undefined &&
+        task.dateDone = new Date() :
+        task.dateCreate = undefined && task.dateDone = new Date();
+    // task.dateCreate = new Date();
+    // task.dateDone = new Date();
+
     renderTaskEllements(tasks);
 };
 
@@ -115,5 +119,3 @@ const handleUpdateTask = (e) => {
 renderTaskEllements(tasks);
 tasksList.addEventListener('click', handleUpdateTask);
 createTaskBtn.addEventListener('click', handleCreateTask);
-
-
