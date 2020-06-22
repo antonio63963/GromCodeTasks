@@ -3,34 +3,34 @@ const tasks = [{
         done: false,
         id: 1,
         dateCreate: 1592358805803,
-        dateDone: undefined,
+        dateDone: null,
     },
     {
         text: 'Pick up Tom from airport',
         done: false,
         id: 2,
         dateCreate: 159235880403,
-        dateDone: undefined,
+        dateDone: null,
     },
     {
         text: 'Visit party',
         done: false,
         id: 3,
         dateCreate: 1592358803503,
-        dateDone: undefined,
+        dateDone: null,
     },
     {
         text: 'Visit doctor',
         done: true,
         id: 4,
-        dateCreate: 1592358880803,
+        dateCreate: null,
         dateDone: 1592358805803,
     },
     {
         text: 'Buy meat',
         done: true,
         id: 5,
-        dateCreate: new Date,
+        dateCreate: null,
         dateDone: 1592458805803,
     },
 ];
@@ -90,7 +90,7 @@ const handleCreateTask = () => {
         done: false,
         id: tasks.length + 1,
         dateCreate: new Date(),
-        dateDone: undefined
+        dateDone: null
     });
     renderTaskEllements(tasks);
     taskInput.value = '';
@@ -105,10 +105,10 @@ const handleUpdateTask = (e) => {
     const task = tasks.find(student => student.id == idElem);
     task.done = !task.done;
 
-    if(task.done == true) {task.dateCreate = undefined;
+    if(task.done == true) {task.dateCreate = null;
         task.dateDone = new Date();
      } else {
-        task.dateCreate = undefined;
+        task.dateCreate = null;
         task.dateDone = new Date();
      }
 
