@@ -81,7 +81,7 @@ const renderTaskEllements = (arr) => {
     tasksList.append(...resultArr);
 };
 // handlers
-const handleCreateTask = () => {
+ const handleCreateTask = () => {
     if (taskInput.value == '') {
         return;
     }
@@ -96,8 +96,8 @@ const handleCreateTask = () => {
     taskInput.value = '';
 };
 
-const handleUpdateTask = (e) => {
-
+ const handleUpdateTask = (e) => {
+    
     if (e.target.type !== 'checkbox') return;
 
     const idElem = e.target.dataset.id;
@@ -106,12 +106,12 @@ const handleUpdateTask = (e) => {
     task.done = !task.done;
 
     if(task.done == true) {
-        task.dateDone = new Date();
+        task.dateDone = new Date().getTime();
      } else {
-        task.dateCreate = new Date();
+        task.dateCreate = new Date().getTime();
         task.dateDone = null;
      }
-
+     console.log(task);
     renderTaskEllements(tasks);
 };
 
@@ -120,3 +120,6 @@ const handleUpdateTask = (e) => {
 renderTaskEllements(tasks);
 tasksList.addEventListener('click', handleUpdateTask);
 createTaskBtn.addEventListener('click', handleCreateTask);
+
+const elem = document.querySelectorAll('.list__item-checkbox')[0];
+console.log(elem)
