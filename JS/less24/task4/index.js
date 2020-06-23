@@ -105,7 +105,7 @@ const handleUpdateTask = (e) => {
     const task = tasks.find(task => task.id == idElem);
     task.done = !task.done;
 
-    task.done == true ?
+    task.done ?
     task.dateDone = new Date().getTime() :
     task.dateDone = null;
 
