@@ -51,24 +51,45 @@
 // };
 
 // var#2
+// export const studentsBirthDays = (students) => {
+//     const monthesArr = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Dec'];
+//     const res = [...students].reduce((acc, student) => {
+//         const month = monthesArr[new Date(student.birthDate).getMonth()];
+//         if (acc.hasOwnProperty(month)) {
+//             acc[month].push(student);
+//             acc[month] = acc[month].sort((a, b) => new Date(a.birthDate).getDate() - new Date(b.birthDate).getDate());
+//         } else {
+//             acc[month] = [student];
+//         }
+//         return acc;
+//     }, {});
+//     const a = {};
+//     for (let key in res) {
+//         a[key] = res[key].map(s => s.name);
+//     }
+//     return a;
+// };
+
+// var#3
+
 export const studentsBirthDays = (students) => {
     const monthesArr = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Dec'];
-    const res = [...students].reduce((acc, student) => {
-        const month = monthesArr[new Date(student.birthDate).getMonth()];
-        if (acc.hasOwnProperty(month)) {
-            acc[month].push(student);
-            acc[month] = acc[month].sort((a, b) => new Date(a.birthDate).getDate() - new Date(b.birthDate).getDate());
-        } else {
-            acc[month] = [student];
-        }
-        return acc;
-    }, {});
-    const a = {};
-    for (let key in res) {
-        a[key] = res[key].map(s => s.name);
-    }
-    return a;
+    return  [...students]
+        .sort((a, b) =>
+            new Date(a.birthDate).getDate() - new Date(b.birthDate).getDate())
+        .reduce((acc, student) => {
+            const month = monthesArr[new Date(student.birthDate).getMonth()];
+            if (acc.hasOwnProperty(month)) {
+                acc[month].push(student.name);
+               
+            } else {
+                acc[month] = [student.name];
+            }
+            return acc;
+        }, {});
+
+    
 };
 
-// console.log(studentsbirthDates(students));
 
+// console.log(studentsBirthDays(students));
