@@ -23,14 +23,14 @@ const tasks = [{
         text: 'Visit doctor',
         done: true,
         id: 4,
-        dateCreate: null,
+        dateCreate: 1592340805803,
         dateDone: 1592358805803,
     },
     {
         text: 'Buy meat',
         done: true,
         id: 5,
-        dateCreate: null,
+        dateCreate: 1592435805803,
         dateDone: 1592458805803,
     },
 ];
@@ -105,11 +105,10 @@ const handleUpdateTask = (e) => {
     const task = tasks.find(task => task.id == idElem);
     task.done = !task.done;
 
-    task.done == true ?
-        task.dateDone = new Date().getTime() :
-        task.dateDone = null;
+    task.done ? task.dateDone = new Date().getTime() : task.dateDone = null;
 
     console.log(task);
+
     renderTaskEllements(tasks);
 };
 
