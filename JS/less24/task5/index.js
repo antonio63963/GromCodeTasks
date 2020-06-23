@@ -1,34 +1,34 @@
-const students = [{
-        name: 'Tom',
-        birthDate: '01/15/2010',
-    },
-    {
-        name: 'Tony',
-        birthDate: '05/10/2011'
-    },
+// const students = [{
+//         name: 'Tom',
+//         birthDate: '01/15/2010',
+//     },
+//     {
+//         name: 'Tony',
+//         birthDate: '05/10/2011'
+//     },
 
-    {
-        name: 'Ben',
-        birthDate: '01/17/2008'
-    },
-    {
-        name: 'Sam',
-        birthDate: '03/15/2010'
-    },
-    {
-        name: 'Jack',
-        birthDate: '03/25/2001'
-    },
-    {
-        name: 'Bill',
-        birthDate: '05/30/2011'
-    },
-    {
-        name: 'Ann',
-        birthDate: '05/12/2010'
-    },
+//     {
+//         name: 'Ben',
+//         birthDate: '01/17/2008'
+//     },
+//     {
+//         name: 'Sam',
+//         birthDate: '03/15/2010'
+//     },
+//     {
+//         name: 'Jack',
+//         birthDate: '03/25/2001'
+//     },
+//     {
+//         name: 'Bill',
+//         birthDate: '05/30/2011'
+//     },
+//     {
+//         name: 'Ann',
+//         birthDate: '05/12/2010'
+//     },
 
-];
+// ];
 // var#1
 
 // export const studentsbirthDates = (students) => {
@@ -70,5 +70,5 @@ export const studentsBirthDays = (students) => {
     return a;
 };
 
-console.log(studentsbirthDates(students));
+// console.log(studentsbirthDates(students));
 
