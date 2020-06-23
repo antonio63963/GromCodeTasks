@@ -120,5 +120,3 @@ renderTaskEllements(tasks);
 tasksList.addEventListener('click', handleUpdateTask);
 createTaskBtn.addEventListener('click', handleCreateTask);
 
-const elem = document.querySelectorAll('.list__item-checkbox')[0];
-console.log(elem)
