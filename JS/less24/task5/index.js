@@ -51,7 +51,7 @@ const students = [{
 // };
 
 // var#2
-export const studentsbirthDates = (students) => {
+export const studentsBirthDays = (students) => {
     const monthesArr = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Dec'];
     const res = [...students].reduce((acc, student) => {
         const month = monthesArr[new Date(student.birthDate).getMonth()];
