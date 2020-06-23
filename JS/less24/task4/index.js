@@ -102,11 +102,12 @@ const renderTaskEllements = (arr) => {
 
     const idElem = e.target.dataset.id;
 
-    const task = tasks.find(student => student.id == idElem);
+    const task = tasks.find(task => task.id == idElem);
     task.done = !task.done;
 
     if(task.done == true) {
         task.dateDone = new Date().getTime();
+        task.dateCreate = null;
      } else {
         task.dateCreate = new Date().getTime();
         task.dateDone = null;
