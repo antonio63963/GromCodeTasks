@@ -89,7 +89,7 @@ const handleCreateTask = () => {
         text: taskInput.value,
         done: false,
         id: tasks.length + 1,
-        dateCreate: new Date(),
+        dateCreate: new Date().getTime(),
         dateDone: null
     });
     renderTaskEllements(tasks);
@@ -105,7 +105,9 @@ const handleUpdateTask = (e) => {
     const task = tasks.find(task => task.id == idElem);
     task.done = !task.done;
 
-    task.done ? task.dateDone = new Date().getTime() : task.dateDone = null;
+    task.done == true ?
+    task.dateDone = new Date().getTime() :
+    task.dateDone = null;
 
     console.log(task);
 
