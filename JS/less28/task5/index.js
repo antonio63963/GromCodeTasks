@@ -35,4 +35,4 @@ export const shmoment = (date) => {
     return methods;
 };
 
-// console.log(shmoment(new Date()).add('days', 5).result());
+// console.log(shmoment(new Date()).add('months', 5).substruct('days', 6).substruct('years', 5).result());
