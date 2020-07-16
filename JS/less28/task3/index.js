@@ -19,14 +19,14 @@ const tree = {
     ]
 };
 
-const markFav = (tree, fav) => {
+const markFavorites = (tree, fav) => {
    const isFav = fav.includes(tree.id);
    console.log(isFav, '  ', tree.id);
 
    return {
        ...tree,
        isFav,
-       nodes: tree.nodes.map(childNodes => markFav(childNodes, favorites))
+       nodes: tree.nodes.map(childNodes => markFavorites(childNodes, favorites))
    };
 };
 
