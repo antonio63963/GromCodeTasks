@@ -24,7 +24,7 @@ export const shmoment = (date) => {
             result = new Date(result[setMethod[unit]](result[getMethod[unit]]() + amount));
             return this; 
         },
-        substruct(unit, amount) {
+        substract(unit, amount) {
             result = new Date(result[setMethod[unit]](result[getMethod[unit]]() - amount));
             return this;
         },
