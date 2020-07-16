@@ -1,4 +1,4 @@
- const calc = (num) => {
+export const calc = (num) => {
      let result = num;
 
      const calculator = {
