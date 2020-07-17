@@ -1,4 +1,4 @@
- const delay = (delay, callback, context, ...args) => {
+export const delay = (delay, callback, context, ...args) => {
     if ([...args].length > 0) {
         setTimeout(() => callback.call(context), delay);
     }
