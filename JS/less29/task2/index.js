@@ -1,4 +1,4 @@
-const pinger = (amount, msec) => {
+export const pinger = (amount, msec) => {
     console.log('Ping');
     const intervalId = setInterval(() => {
         if(--amount) {
