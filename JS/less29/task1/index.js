@@ -1,6 +1,5 @@
 export const addImage = (imgSrc, callback) => {
 
-    //TODO write your code here
     const addImageElem = document.querySelector('.page');
     
     const imageElem = document.createElement('img');
@@ -14,7 +13,6 @@ export const addImage = (imgSrc, callback) => {
     imageElem.addEventListener('load', waitLoad);
 };
 
-//callack example
 const onImageLoaded = (error, imgElem) => {
     if (error) {
         console.log(error);
