@@ -1,4 +1,4 @@
-export { requestUserData, callback1 };
+export { requestUserData, callback }
 
 function requestUserData(userId, callback) {
     const random = Math.ceil(Math.random() * 3000);
